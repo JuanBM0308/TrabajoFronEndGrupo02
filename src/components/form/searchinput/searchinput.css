@@ -1,0 +1,32 @@
+.search-container{
+    display: flex;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 4px 4px 15px #858585;
+}
+.search-input{
+    flex: 1;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    padding-left: 10px;
+
+}
+
+.search-button{
+padding: 0.5rem 1rem;
+border: none;
+background-color: var(--color-primario);
+color: #fff;
+border-radius: 5px;
+font-weight: bold;
+transition: .3s ease-in-out;
+cursor: pointer;
+}
+
+.search-button:hover{
+    background-color:var(--color-primario2);
+    color: #fff;
+}

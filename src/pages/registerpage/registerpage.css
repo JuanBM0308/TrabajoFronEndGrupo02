@@ -1,0 +1,27 @@
+#register-form{
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--color-primario2);
+}
+
+#register-form input{
+    width: 50%;
+    margin: 5px auto;
+}
+.form-group label{
+padding-top: 3px;
+font-weight: bold;
+}
+
+#register-form #register-btn{
+    background-color:var(--color-primario);
+    color: #fff;
+    font-weight: 900;
+}
+
+#register-form #register-url{
+    color:var(--color-primario2);
+    font-weight: 900;
+}

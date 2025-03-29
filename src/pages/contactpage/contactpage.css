@@ -1,0 +1,9 @@
+#contact p {
+    color: var(--color-primario2);
+    font-weight: 700;
+}
+
+#contact p span{
+    color: var(--color-primario2);
+    font-weight: 700;
+}

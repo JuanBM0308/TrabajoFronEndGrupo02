@@ -1,0 +1,51 @@
+#new .one img{
+    width: 100%;
+    width: 100%;
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+#new .one{
+position: relative;
+}
+
+#new .one .details{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: rgb(221, 202, 202);
+    font-weight: bold;
+    transition: 0.4s ease;
+    opacity: 0.6;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+}
+#new .one .details:hover{
+    background-color: rgba(206, 211, 215, 0.029);
+    color: black;
+}
+#new .one:nth-child(1) .details{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: flex-start;
+text-align: start;
+}
+
+#new .one:nth-child(2) .details{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+text-align: center;
+
+}
+#new .one:nth-child(3) .details{
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: flex-end;
+text-align: end;
+}

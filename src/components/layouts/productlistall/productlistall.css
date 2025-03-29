@@ -1,0 +1,10 @@
+#featured hr{
+    background-color: var(--color-primario2);
+}
+
+#featured h3{
+font-weight: 900;
+}
+#featured p{
+    font-weight: 600;
+}

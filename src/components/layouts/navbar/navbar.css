@@ -1,0 +1,77 @@
+.navbar{
+    font-size: 17px;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgb(0,0,0,0.1);
+}
+.material-symbols-outlined{
+    padding: 0 20px;
+    color: black;
+    transition: 0.4s ease;
+}
+
+.material-symbols-outlined:hover{
+color:var(--color-primario2);
+}
+.navbar h2{
+    margin-left: 20px;
+}
+.navbar li{
+list-style: none;
+ font-size: 1.5rem;
+ 
+}
+.navbar span{
+    padding:0 0.7px ;
+    transition: 0.4s ease;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 5px;
+}
+@media only screen and (max-width:990px){
+.nav-buttons{
+    margin: 10px;
+}
+
+.nav-buttons ul{
+    margin: 1rem;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.navbar form{
+width: 10px;
+
+}
+.navbar .no-link-style{
+text-decoration: none;
+color: inherit;
+
+}
+
+.nav-buttons ul .fas{
+    margin: 2px 5px 10px 20px;
+}
+}
+.navbar-collapse{
+z-index: 99;
+}
+.navbar-collapse ul{
+margin-left: 10px;
+display: flex;
+flex-wrap: nowrap;
+
+}
+.navbar-collapse li{
+padding-right: 10px;
+}
+.nav-link{
+    font-weight: 800;
+}
+.btn{
+border-color:var(--color-primario2) ;  
+}
+
+

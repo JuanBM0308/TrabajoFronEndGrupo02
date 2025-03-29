@@ -1,0 +1,42 @@
+hr{
+    width: 30px;
+    height: 3px !important;
+    opacity:1 !important;
+}
+.star{
+    padding: 10px 0;
+}
+
+.star i {
+color: goldenrod;
+}
+
+.product{
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.product img{
+    transition: 0.4s all;
+    width: 100%;
+}
+.p-name,.p-price{
+ font-weight: 800;   
+}
+.product:hover img{
+    opacity: 0.6;
+}
+
+.product .buy-btn{
+    background-color: var(--color-primario2);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 0.3s;
+
+}
+
+.product:hover .buy-btn{
+transform: translateY(0);
+opacity: 1;
+color: white;
+}

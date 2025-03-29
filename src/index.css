@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+  font-family: "Poppins";
+  font-weight: 400;
+}
+:root{
+--color-primario:#a9a9da;
+--color-primario2: #6728a1;
+}
+
+body{
+font-family: "Poppins";
+font-weight: 900;
+
+}
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+h2{
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+h3{
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+@media only screen and (max-width:990px){
+.nav-buttons{
+    margin: 10px;
+}
+}
+.container{
+  width: 90%;
+  margin: auto;
+}
+
+
+.flex{
+  display: flex;
+} 
+.justify-between{
+  justify-content: space-between;
+} 
+.justify-center{
+  justify-content: center;
+}
+.aling-center{
+  align-items:center
+}
+
+button{
+    font-size: 1rem;
+    font-weight: 300;
+    outline: none;
+    border: none;
+    color: rgb(255, 255, 255);
+    background-color:var(--color-primario);
+    padding: 13px 30px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    border-radius: 6%;
+    font-weight: 900;
+}
+button:hover{
+color: rgb(247, 247, 247);
+background:var(--color-primario2);
+}
+.logo{
+    width: 40px;
+    height: 40px;
+}
+
+.d-flex .btn{
+  border-color:var(--color-primario2);
+}
+
+.d-flex btn:hover{
+  background-color: var(--color-primario2);
+}

@@ -1,0 +1,22 @@
+#login-form{
+    width: 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding: 20px;
+    border-top:1px solid var(--color-primario);
+}
+
+#login-form input{
+    width: 50%;
+    margin: 5px auto;
+}
+
+#login-form #login-btn{
+    background-color: var(--color-primario);
+    color: #fff;
+    font-weight: 900;
+}
+#login-form #register-url{
+    color: var(--color-primario);
+    font-weight: 900;
+}

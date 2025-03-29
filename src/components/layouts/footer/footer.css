@@ -1,0 +1,51 @@
+.footer-container{
+    background-color: rgb(36, 36, 36);
+}
+
+.footer-container h5{
+    color: rgb(227, 227, 227);
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+
+}
+.footer-one li{
+    padding-bottom: 4px;
+}
+
+.footer-one li a{
+    font-size: 0.8rem;
+    font-weight: 900;
+    color: rgb(237, 231, 231);
+    text-decoration: none;
+}
+
+.footer-one li a:hover{
+    color: rgb(228, 149, 228);
+}
+
+.footer-container .fa-copyright a{
+    color: black;
+    height: 40px;
+    width: 40px;
+    background-color: azure;
+    display: inline-block;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 50%;
+    transition:0.3s ease;
+    margin: 0 5px;
+}
+
+.footer-container .fa-copyright a:hover{
+    color: #fff;
+    background-color: rgb(133, 41, 41);
+}
+.footer-container p{
+    color: #fff;
+}
+
+.footer-container .fa-copyright img{
+    width: 50%;
+}
+

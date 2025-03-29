@@ -1,0 +1,21 @@
+.relative{
+position: relative;
+}
+
+.searh-container{
+box-shadow: none;
+padding-top: 10%;
+}
+.search-container{
+width:50% ;
+margin: auto;
+box-shadow: 4px 4px 15px #cac5c5;
+
+}
+
+.searh-container h2{
+    text-align: center;
+    padding: 1rem;
+    font-weight: bold;
+}
+
