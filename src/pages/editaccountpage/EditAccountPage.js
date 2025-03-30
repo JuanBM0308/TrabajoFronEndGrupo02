@@ -110,7 +110,7 @@ const EditAccountPage = () => {
                     <label></label>
                     <button
                       className="form-control edit-input change-password-btn"
-                      onClick={() => navigate("/edit-account")}
+                      onClick={() => navigate("/change-password-account")}
                     >
                       <span className="btn-text">Cambiar contraseña</span>
                       <span className="material-symbols-outlined edit-icon">
