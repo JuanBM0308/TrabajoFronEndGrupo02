@@ -82,13 +82,17 @@ const Navbar = () => {
           </ul>
 
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/cart">
-                <span className="material-symbols-outlined">
-                  add_shopping_cart
-                </span>
-              </Link>
-            </li>
+            {accessToken ? (
+              <li className="nav-item">
+                <Link className="nav-link" to="/cart">
+                  <span className="material-symbols-outlined">
+                    add_shopping_cart
+                  </span>
+                </Link>
+              </li>
+            ) : (
+              <></>
+            )}
 
             {accessToken ? (
               <li className="nav-item">

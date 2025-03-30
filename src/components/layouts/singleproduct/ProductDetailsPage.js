@@ -1,33 +1,24 @@
-import './productdetailspage.css';
+import "./productdetailspage.css";
 
-import React, {
-  useEffect,
-  useState,
-} from 'react';
+import React, { useEffect, useState } from "react";
 
-import {
-  addDoc,
-  collection,
-} from 'firebase/firestore';
-import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { getUserFromToken, isAuthenticated } from "../../../util/Auth";
+import { useParams } from "react-router-dom";
+import { toast } from "react-toastify";
 
-import { ProductData } from '../../../util/ProductData';
-import {
-  auth,
-  db,
-} from '../../firebase/FireBase'; // Ruta corregida
+import { ProductData } from "../../../util/ProductData";
 
 const ProductDetailsPage = () => {
   const { id } = useParams();
   const [productData, setProductData] = useState({});
-  const [mainImage, setMainImage] = useState('');
+  const [mainImage, setMainImage] = useState("");
   const [quantity, setQuantity] = useState(1);
-  const [user] = useAuthState(auth);
 
   useEffect(() => {
-    const newData = ProductData.filter((product) => product.id === parseInt(id));
+    const newData = ProductData.filter(
+      (product) => product.id === parseInt(id)
+    );
+
     if (newData.length > 0) {
       setProductData(newData[0]);
       setMainImage(newData[0].image1);
@@ -37,32 +28,53 @@ const ProductDetailsPage = () => {
   const handleImageClick = (image) => {
     setMainImage(image);
   };
-  
+
   const addToCart = async () => {
-    if (!user) {
-      toast.error('Debes estar logueado para agregar productos al carrito');
+    if (!isAuthenticated()) {
+      toast.error("Debes estar logueado para agregar productos al carrito");
       return;
     }
 
-    try {
-      await addDoc(collection(db, 'cart'), {
-        userId: user.uid,
+    let user = getUserFromToken();
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const existingProductIndex = cart.findIndex(
+      (item) => item.productId === productData.id
+    );
+
+    console.log(productData);
+
+    if (existingProductIndex !== -1) {
+      // Si el producto ya está en el carrito, aumenta la cantidad
+
+      cart[existingProductIndex].quantity += Number(quantity);
+    } else {
+      // Si el producto no está en el carrito, agrégalo
+
+      cart.push({
+        email: user.email,
         productId: productData.id,
         name: productData.name,
+        image1: productData.image1,
         price: productData.price,
-        quantity,
+        quantity: Number(quantity),
       });
-      toast.success('Producto agregado al carrito');
-    } catch (error) {
-      toast.error('Error al agregar el producto al carrito');
     }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    toast.success("Producto agregado al carrito");
   };
 
   return (
-    <section className='product-details'>
+    <section className="product-details">
       <div className="row mt-5">
         <div className="col-lg-5 col-md-6 col-sm-12">
-          <img className="main-img p-3" src={mainImage} alt="producto" id="mainImg" />
+          <img
+            className="main-img p-3"
+            src={mainImage}
+            alt="producto"
+            id="mainImg"
+          />
           <div className="small-img-group p-2">
             <div className="small-img-col">
               <img
@@ -117,7 +129,9 @@ const ProductDetailsPage = () => {
             min="1"
             onChange={(e) => setQuantity(e.target.value)}
           />
-          <button className="buy-btn" onClick={addToCart}>Agregar al Carrito</button>
+          <button className="buy-btn" onClick={addToCart}>
+            Agregar al Carrito
+          </button>
           <h4 className="mt-5 mb-5">Detalles del Producto</h4>
           <span>{productData.description}</span>
         </div>
