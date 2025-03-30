@@ -9,8 +9,10 @@
   font-weight: 400;
 }
 :root{
---color-primario:#a9a9da;
---color-primario2: #6728a1;
+  --color-primario:#a9a9da;
+  --color-primario2: #6728a1;
+  --color-sub-titles-purple: #7607C0;
+  --color-sub-titles-grey: #8B8E99;
 }
 
 body{

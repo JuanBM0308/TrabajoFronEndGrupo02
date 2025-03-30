@@ -19,6 +19,11 @@ import RegisterPage from './pages/registerpage/RegisterPage';
 import SearchPage from './pages/searchPage/SearchPage.js';
 import SignUpPage from './pages/signuppage/SignUpPage';
 
+/** 
+* TODO: Admin imports 
+*/
+import ClientInformationPage from './pages/admin/clientinformationpage/ClientInformationPage.js';
+
 const App = () => {
     return (
         <div>
@@ -33,6 +38,11 @@ const App = () => {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path='/search' element={<SearchPage/>}/>
 
+
+                /**
+                * ! cliente page path 
+                */
+                <Route path="/customer-info" element={<ClientInformationPage />} />
             </Routes>
             <ToastContainer />
         </div>
