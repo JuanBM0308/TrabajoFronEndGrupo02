@@ -1,19 +1,20 @@
 import "./editaccountpage.css";
 
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { getUserFromToken, isAuthenticated } from "../../util/Auth";
+import { toast } from "react-toastify";
+import { useNavigate } from "react-router-dom";
+import { getUserFromToken } from "../../util/Auth";
 
 import Footer from "../../components/layouts/footer/Footer";
 import Navbar from "../../components/layouts/navbar/Navbar";
 
 const EditAccountPage = () => {
-  const linkStyle = { textDecoration: "none", color: "purple" };
   const navigate = useNavigate();
+
   const [user, setUser] = useState(null);
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState(null);
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
 
   // Función para obtener los datos del usuario actual
   useEffect(() => {
@@ -26,76 +27,103 @@ const EditAccountPage = () => {
     }
   }, []);
 
+  const validateAndSave = () => {
+    if (!name.trim()) {
+      toast.error("El nombre es obligatorio");
+      return;
+    }
+    if (!email.trim() || !/\S+@\S+\.\S+/.test(email)) {
+      toast.error("Ingrese un email válido");
+      return;
+    }
+    if (!phone.trim() || !/^\d{10}$/.test(phone)) {
+      toast.error("Ingrese un número de teléfono válido (10 dígitos)");
+      return;
+    }
+
+    toast.success("Cambios guardados correctamente");
+    navigate("/account");
+  };
+
   return (
     <section>
       <Navbar />
       <div>
         {user ? (
           <div className="my-5 py-5">
-            <div className="row container mx-auto">
-              <div className="text-center mt-3 pt-5 col-lg-6 col-md-12 col-sm-12">
-                <h3 className="font-weight-bold">Información de Cuenta</h3>
-                <hr className="mx-auto" />
-                <div className="account-info">
-                  <p style={linkStyle}>{user.email}</p>
-                  <p>
-                    <Link to="/cart" style={linkStyle} id="order-btn">
-                      Tus pedidos
-                    </Link>
-                  </p>
-                  <p>
-                    <a
-                      href="/signin"
-                      id="logout-btn"
-                      onClick={() => true}
-                      style={linkStyle}
+            <div className="row container mx-auto account-container">
+              <div className="text-center mt-3 pt-5 col-lg-4 col-md-12 col-sm-12">
+                <img
+                  src="/usericon.png"
+                  alt="User Profile"
+                  className="edit-user-image"
+                />
+              </div>
+
+              <div className="form-container col-lg-8 col-md-12 col-sm-12">
+                <div className="form-group col-lg-6 col-md-12 col-sm-12">
+                  <div className="form-group">
+                    <label>Nombre</label>
+                    <input
+                      type="text"
+                      className="form-control edit-input"
+                      id="account-name"
+                      name="name"
+                      placeholder="Contraseña"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label>Email</label>
+                    <input
+                      type="email"
+                      className="form-control edit-input"
+                      id="account-email"
+                      name="email"
+                      placeholder="Confirmar Contraseña"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group col-lg-6 col-md-12 col-sm-12">
+                  <div className="form-group">
+                    <label>Telefono</label>
+                    <input
+                      type="text"
+                      className="form-control edit-input"
+                      id="account-password"
+                      name="phone"
+                      placeholder="Telefono"
+                      value={phone}
+                      onChange={(e) => setPhone(e.target.value)}
+                      required
+                    />
+                  </div>
+
+                  <div className="form-group">
+                    <label></label>
+                    <button
+                      className="form-control edit-input change-password-btn"
+                      onClick={() => navigate("/edit-account")}
                     >
-                      Cerrar Sesión
-                    </a>
-                  </p>
+                      <span className="btn-text">Cambiar contraseña</span>
+                      <span className="material-symbols-outlined edit-icon">
+                        edit
+                      </span>
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12 col-sm-12">
-                <form id="account-form" onSubmit={() => true}>
-                  <h3>Cambiar Contraseña</h3>
-                  <hr className="mx-auto" />
-                  <div className="form-group">
-                    <label>Contraseña</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="account-password"
-                      name="password"
-                      placeholder="Contraseña"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <label>Confirmar Contraseña</label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="account-password-confirm"
-                      name="confirmPassword"
-                      placeholder="Confirmar Contraseña"
-                      value={confirmPassword}
-                      onChange={(e) => setConfirmPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-                  <div className="form-group">
-                    <input
-                      type="submit"
-                      className="btn"
-                      value="Confirmar"
-                      id="change-pass-btn"
-                    />
-                  </div>
-                </form>
-                {message && <p className="text-danger">{message}</p>}
-              </div>
+
+              <button className="save-account-btn" onClick={validateAndSave}>
+                Guardar cambios
+              </button>
             </div>
           </div>
         ) : (

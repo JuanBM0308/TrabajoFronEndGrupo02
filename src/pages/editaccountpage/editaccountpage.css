@@ -1,20 +1,95 @@
-#account-form{
-    width: 50%;
-    margin: 25px auto;
-    text-align: center;
-    padding: 20px;
+#account-form {
+  width: 50%;
+  margin: 25px auto;
+  text-align: center;
+  padding: 20px;
 }
 
-#account-form input{
-    margin: 5px auto;
+#account-form input {
+  margin: 5px auto;
 }
 
-#account-form #change-pass-btn{
-    color: #fff;
-    font-weight: 900;
-    background-color:var(--color-primario2);
+#account-form #change-pass-btn {
+  color: #fff;
+  font-weight: 900;
+  background-color: var(--color-primario2);
 }
-.account-info #order-btn,#logout-btn{
-    color: var(--color-primario2);
-    text-decoration: none;
+
+.account-info #order-btn,
+#logout-btn {
+  color: var(--color-primario2);
+  text-decoration: none;
+}
+
+.edit-user-image {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.form-container .form-group {
+  margin: 0 10px;
+}
+
+.edit-input {
+  margin-bottom: 25px;
+}
+
+.change-password-btn {
+  background-color: #fff;
+  color: #000 !important;
+  font-weight: 900 !important;
+  border: 2px solid #222222 !important;
+  display: flex !important; /* Usa flexbox */
+  align-items: center; /* Alinea verticalmente */
+  padding: 10px 15px; /* Espaciado interno */
+  transition: all 0.3s ease-in-out !important;
+  justify-content: space-between;
+}
+
+.btn-text {
+  text-align: left; /* Alinea el texto a la izquierda */
+  font-size: 16px; /* Tamaño de fuente del texto */
+  align-items: center !important;
+}
+
+.edit-icon {
+  font-size: 20px;
+  color: #222222;
+  align-items: center !important;
+}
+
+.change-password-btn:hover {
+  background-color: #bdbdbd;
+  border: 2px solid #949494;
+  color: #fff;
+  cursor: pointer;
+}
+
+.save-account-btn {
+  margin: 25px auto 0;
+  background-color: #fff;
+  color: #fff !important;
+  background-color: #222222;
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  max-width: 250px !important;
+}
+
+.save-account-btn:hover {
+  background-color: #222222;
+  opacity: 0.9;
+  color: #fff;
+  cursor: pointer;
 }
