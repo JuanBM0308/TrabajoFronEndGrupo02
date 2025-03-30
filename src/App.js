@@ -7,6 +7,7 @@ import { ToastContainer } from "react-toastify";
 
 import CartPage from "../src/pages/cartpage/CartPage.js";
 import AccountPage from "./pages/accountpage/AccountPage.js";
+import EditAccountPage from "./pages/editaccountpage/EditAccountPage.js";
 import ContactPage from "./pages/contactpage/ContactPage.js";
 import HomePage from "./pages/homepage/HomePage";
 import ProductsDetailsPage from "./pages/productsdetailspage/ProductsDetailsPage";
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/account" element={<AccountPage />} />
+        <Route path="/edit-account" element={<EditAccountPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/search" element={<SearchPage />} />
         <Route path="/admin/dashboard-page" element={<DashboardPage />} />
