@@ -30,7 +30,7 @@ const AuthFormR = () => {
                             <input type="submit" class="btn" id="register-btn" value="Register"></input>
                         </div>
                         <div className="form-group">
-                            <Link id="register-url" class="btn" to="/signup">Ya tienes una cuenta? Ingresar</Link>
+                            <Link id="register-url" class="btn" to="/signin">Ya tienes una cuenta? Ingresar</Link>
                 </div>
             </form>
         </div>

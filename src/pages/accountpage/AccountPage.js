@@ -58,7 +58,7 @@ const AccountPage = () => {
     const handleLogout = async () => {
         try {
             await auth.signOut();
-            navigate('/signup');
+            navigate('/signin');
         } catch (error) {
             console.error("Error al cerrar sesión:", error.message);
         }
@@ -104,7 +104,7 @@ const AccountPage = () => {
                                         <Link to="/cart" style={linkStyle} id="order-btn">Tus pedidos</Link>
                                     </p>
                                     <p>
-                                        <a href="/signup" id="logout-btn" onClick={handleLogout} style={linkStyle}>Cerrar Sesión</a>
+                                        <a href="/signin" id="logout-btn" onClick={handleLogout} style={linkStyle}>Cerrar Sesión</a>
                                     </p>
                                 </div>
                             </div>
