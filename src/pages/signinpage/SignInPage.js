@@ -1,35 +1,61 @@
 import "./signinpage.css";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { Link, useNavigate } from "react-router-dom"; // Importa useNavigate
+import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
-import { auth } from "../../components/firebase/FireBase";
 import Footer from "../../components/layouts/footer/Footer";
 import Navbar from "../../components/layouts/navbar/Navbar";
 
 const SignInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [users, setUsers] = useState([]); // Estado para almacenar los usuarios
 
   const navigate = useNavigate(); // Usa useNavigate
 
+  useEffect(() => {
+    if (users.length === 0) {
+      fetch("/users.json")
+        .then((response) => response.json())
+        .then((data) => setUsers(data))
+        .catch((error) => console.error("Error cargando usuarios:", error));
+    }
+  }, [users]);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signInWithEmailAndPassword(auth, email, password);
-      console.log("Inicio de sesion correcto");
-      toast.success("Inicio de sesión correcto", {
-        position: "top-center",
-      });
-      navigate("/"); // Redirige al usuario a la página de inicio
-    } catch (error) {
-      console.log(error.message);
-      toast.error(error.message, {
+
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+
+    if (!user) {
+      toast.error("Las credenciales ingresadas no son correctas", {
         position: "bottom-center",
       });
+
+      return;
+    }
+
+    localStorage.setItem("access_token", user.access_token);
+    toast.success("Inicio de sesión correcto", { position: "top-center" });
+
+    switch (user.role) {
+      case "admin":
+        navigate("/admin/dashboard-page");
+        break;
+
+      case "user":
+        navigate("/account");
+        break;
+
+      default:
+        toast.error("Las credenciales ingresadas no son correctas", {
+          position: "bottom-center",
+        });
+        break;
     }
   };
 

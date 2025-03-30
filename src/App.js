@@ -14,6 +14,10 @@ import ProductsPage from "./pages/productspage/ProductsPage";
 import RegisterPage from "./pages/registerpage/RegisterPage";
 import SearchPage from "./pages/searchPage/SearchPage.js";
 import SignInPage from "./pages/signinpage/SignInPage.js";
+import DashboardPage from "./pages/admin/dashboardpage/DashboardPage.js";
+import ClientInformationPage from "./pages/admin/clientinformationpage/ClientInformationPage.js";
+import ClientPage from "./pages/admin/clientpage/ClientPage.js";
+import SalePage from "./pages/admin/salepage/SalePage.js";
 
 const App = () => {
   return (
@@ -28,6 +32,15 @@ const App = () => {
         <Route path="/account" element={<AccountPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/search" element={<SearchPage />} />
+        <Route path="/admin/dashboard-page" element={<DashboardPage />} />
+
+        <Route
+          path="/admin/client-information-page"
+          element={<ClientInformationPage />}
+        />
+
+        <Route path="/admin/client-page" element={<ClientPage />} />
+        <Route path="/admin/sale-page" element={<SalePage />} />
       </Routes>
       <ToastContainer />
     </div>

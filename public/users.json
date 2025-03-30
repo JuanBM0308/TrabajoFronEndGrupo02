@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Administrador",
+    "email": "administrador@gmail.com",
+    "password": "Admin123#",
+    "role": "admin",
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkFkbWluaXN0cmFkb3IiLCJpYXQiOjE1MTYyMzkwMjIsImV4cCI6MTY1MDk5NTIwMCwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJhZG1pbmlzdHJhZG9yQGdtYWlsLmNvbSJ9.CYXZiyDQrYu7_SyUOYTFbO8O8BIPPgSUeNQp5lx7q2g"
+  },
+  {
+    "name": "Camilo Lopez",
+    "email": "usuario@gmail.com",
+    "password": "Hola123#",
+    "role": "user",
+    "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkNhbWlsbyBMb3BleiIsImlhdCI6MTUxNjIzOTAyMiwiZXhwIjoxNjUwOTk1MjAwLCJyb2xlIjoidXNlciIsImVtYWlsIjoidXN1YXJpb0BnbWFpbC5jb20ifQ.Dg7noPaX-IKTh_6CDoMHGR0qcvRQ3e25w-lepOv0qmU"
+  }
+]
