@@ -30,11 +30,31 @@ const ClientInformationPage = () => {
 
       {/* description user */}
       <div className="container-description-user">
-        <div>
+        <div className="container-image-name-location">
           <div>
-          <img src={userImage} alt="Image user profile"></img>
+            <img className="user-image" src={userImage} alt="Image user profile"></img>
           </div>
-          <div></div>
+          <div className="container-divisor">
+            <h4 className="user-name">Muhammed Babeel</h4>
+            <span className="user-location">Calicut, Kerala</span>
+          </div>
+        </div>
+        <div className="container-contact-info">
+          <div className="contact-info">
+            <span className="content-span">Email:</span>
+            <p className="content-info">nabeel@gmail.com</p>
+          </div>
+          <div className="contact-info">
+            <span className="content-span">Phone:</span>
+            <p className="content-info">+917034985827</p>
+          </div>
+          <div className="contact-info">
+            <span className="content-span">Created at:</span>
+            <p className="content-info">07/11/2021</p>
+          </div>
+        </div>
+        <div className="container-block">
+          <button type="button" class="btn btn-outline-danger btn-lg btn-block">Block</button>
         </div>
       </div>
     </section>
