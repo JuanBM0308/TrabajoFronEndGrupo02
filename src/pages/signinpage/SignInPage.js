@@ -1,5 +1,4 @@
-import "./registerpage.css";
-import "react-toastify/dist/ReactToastify.css";
+import "./signinpage.css";
 
 import React, { useState, useEffect } from "react";
 
@@ -9,11 +8,9 @@ import { toast } from "react-toastify";
 import Footer from "../../components/layouts/footer/Footer";
 import Navbar from "../../components/layouts/navbar/Navbar";
 
-const RegisterPage = () => {
-  const [, setName] = useState("");
+const SignInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [users, setUsers] = useState([]); // Estado para almacenar los usuarios
 
   const navigate = useNavigate(); // Usa useNavigate
@@ -27,118 +24,94 @@ const RegisterPage = () => {
     }
   }, [users]);
 
-  const handleRegister = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (password !== confirmPassword) {
-      toast.error("Las contraseñas no coinciden", {
-        position: "bottom-center",
-      });
-
-      return;
-    }
 
     const user = users.find(
       (u) => u.email === email && u.password === password
     );
 
-    if (user) {
-      toast.error("El usuario ya existe", {
+    if (!user) {
+      toast.error("Las credenciales ingresadas no son correctas", {
         position: "bottom-center",
       });
 
       return;
     }
 
-    const currentUser = users.find((u) => u.role === "user");
-
-    localStorage.setItem("access_token", currentUser.access_token);
+    localStorage.setItem("access_token", user.access_token);
     toast.success("Inicio de sesión correcto", { position: "top-center" });
 
-    navigate("/account");
+    switch (user.role) {
+      case "admin":
+        navigate("/admin/dashboard-page");
+        break;
+
+      case "user":
+        navigate("/account");
+        break;
+
+      default:
+        toast.error("Las credenciales ingresadas no son correctas", {
+          position: "bottom-center",
+        });
+        break;
+    }
   };
 
   return (
     <section>
       <Navbar />
-
       <div className="my-5 py-5">
         <div className="container text-center mt-3 pt-5">
-          <h2 className="form-weight-bold">Registrarse</h2>
+          <h2 className="form-weight-bold">Login</h2>
           <hr className="mx-auto" />
         </div>
-
         <div className="mx-auto container">
-          <form onSubmit={handleRegister} id="register-form">
+          <form id="login-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label>Nombre</label>
+              <label>Email</label>
               <input
-                type="text"
+                type="email"
                 className="form-control"
-                id="register-name"
-                name="name"
-                placeholder="Nombre"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-
-            <div className="form-group">
-              <label>Correo electronico</label>
-              <input
-                type="text"
-                className="form-control"
-                id="register-email"
+                id="login-email"
                 name="Email"
-                placeholder="Correo electronico"
+                placeholder="Email"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
             </div>
-
             <div className="form-group">
               <label>Contraseña</label>
               <input
                 type="password"
                 className="form-control"
-                id="register-password"
+                id="login-password"
                 name="password"
                 placeholder="Contraseña"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-
-            <div className="form-group">
-              <label>Confirmar Contraseña</label>
-              <input
-                type="password"
-                className="form-control"
-                id="register-confirm-password"
-                name="confirmpassword"
-                placeholder="Confirmar Contraseña"
-                onChange={(e) => setConfirmPassword(e.target.value)}
-              />
-            </div>
-
             <div className="form-group">
               <input
                 type="submit"
                 className="btn"
-                id="register-btn"
-                value="Register"
+                id="login-btn"
+                value="Ingresar"
               />
             </div>
-
             <div className="form-group">
-              <Link id="register-url" className="btn" to="/signin">
-                ¿Ya tienes una cuenta? Ingresar
+              <Link id="register-url" className="btn" to="/register">
+                ¿No tienes una cuenta? Registrarse
               </Link>
             </div>
           </form>
         </div>
       </div>
-
       <Footer />
     </section>
   );
 };
 
-export default RegisterPage;
+export default SignInPage;

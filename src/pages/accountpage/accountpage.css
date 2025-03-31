@@ -1,20 +1,64 @@
-#account-form{
-    width: 50%;
-    margin: 25px auto;
-    text-align: center;
-    padding: 20px;
+#account-form {
+  width: 50%;
+  margin: 25px auto;
+  text-align: center;
+  padding: 20px;
 }
 
-#account-form input{
-    margin: 5px auto;
+#account-form input {
+  margin: 5px auto;
 }
 
-#account-form #change-pass-btn{
-    color: #fff;
-    font-weight: 900;
-    background-color:var(--color-primario2);
+#account-form #change-pass-btn {
+  color: #fff;
+  font-weight: 900;
+  background-color: var(--color-primario2);
 }
-.account-info #order-btn,#logout-btn{
-    color: var(--color-primario2);
-    text-decoration: none;
+.account-info #order-btn,
+#logout-btn {
+  color: var(--color-primario2);
+  text-decoration: none;
+}
+
+.title {
+  font-size: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 1rem;
+  margin: 0 auto;
+  text-align: center;
+  color: #5c5a5a;
+}
+
+.user-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.account-container {
+  border: 1px solid #e7e5e5;
+  border-radius: 20px;
+  padding-bottom: 50px;
+  margin-top: 50px !important;
+}
+
+.edit-btn {
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  border: 2px solid #000;
+}
+
+.edit-btn:hover {
+  background-color: #bdbdbd;
+  border: 2px solid #949494;
+  color: #fff;
+  cursor: pointer;
 }

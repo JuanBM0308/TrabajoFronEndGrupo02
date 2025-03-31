@@ -1,37 +1,38 @@
-import './cartproduct.css';
+import "./cartproduct.css";
 
-import React, { useState } from 'react';
-
-import {
-  deleteDoc,
-  doc,
-  updateDoc,
-} from 'firebase/firestore';
-import { toast } from 'react-toastify';
-
-import { db } from '../../components/firebase/FireBase'; // Ruta corregida
+import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const CartProduct = ({ product, fetchCartItems }) => {
   const [quantity, setQuantity] = useState(product.quantity);
 
-  const handleRemove = async () => {
-    try {
-      await deleteDoc(doc(db, 'cart', product.id));
-      toast.success('Producto removido del carrito');
-      fetchCartItems(); // Actualiza los ítems del carrito después de la eliminación
-    } catch (error) {
-      toast.error('Error al remover el producto del carrito');
-    }
+  const handleRemove = () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    // Filtra para eliminar el producto
+    cart = cart.filter((item) => item.productId !== product.productId);
+
+    // Guarda el nuevo carrito en localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    toast.success("Producto removido del carrito");
+    window.location.reload();
   };
 
-  const handleUpdate = async () => {
-    try {
-      await updateDoc(doc(db, 'cart', product.id), { quantity });
-      toast.success('Cantidad actualizada');
-      fetchCartItems(); // Actualiza los ítems del carrito después de la actualización
-    } catch (error) {
-      toast.error('Error al actualizar la cantidad');
-    }
+  const handleUpdate = () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    cart = cart.map((item) =>
+      item.productId === product.productId
+        ? { ...item, quantity: quantity }
+        : item
+    );
+
+    // Guarda el carrito actualizado en localStorage
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    toast.success("Cantidad actualizada");
+    window.location.reload();
   };
 
   return (
@@ -41,9 +42,14 @@ const CartProduct = ({ product, fetchCartItems }) => {
           <img src={product.image1} alt={product.name} />
           <div>
             <p>{product.name}</p>
-            <small><span>$</span>{product.price}</small>
+            <small>
+              <span>$</span>
+              {product.price}
+            </small>
             <br />
-            <a className="remove-btn" onClick={handleRemove} href="#">Remover</a>
+            <a className="remove-btn" onClick={handleRemove} href="#">
+              Remover
+            </a>
           </div>
         </div>
       </td>
@@ -54,7 +60,9 @@ const CartProduct = ({ product, fetchCartItems }) => {
           min="1"
           onChange={(e) => setQuantity(e.target.value)}
         />
-        <a onClick={handleUpdate} href="#" className="edit-btn">Editar</a>
+        <a onClick={handleUpdate} href="#" className="edit-btn">
+          Editar
+        </a>
       </td>
       <td>
         <span>$</span>
