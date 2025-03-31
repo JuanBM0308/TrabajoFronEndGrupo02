@@ -32,6 +32,12 @@
     font-size: 1.5rem;
 }
 
+.customer-options {
+    padding: .1rem;
+    border-radius: 10px;
+    border-color: var(--color-sub-titles-purple);
+}
+
 svg {
     margin-top: 0.5rem;
     margin: 0.5rem 0;
@@ -75,7 +81,7 @@ svg {
 * ? description user
 */
 .container-description-user {
-    height: 84vh;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;

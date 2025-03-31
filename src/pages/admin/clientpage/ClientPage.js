@@ -2,8 +2,15 @@ import "./clientpage.css";
 
 import React from "react";
 
+import NavbarAdmin from "../../../components/layouts/navbar-admin/Navbar-admin";
+
 const ClientPage = () => {
-  return <div></div>;
+  return (
+    <section className="container-customer-list">
+      <NavbarAdmin/>
+      
+    </section>
+  );
 };
 
 export default ClientPage;

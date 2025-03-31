@@ -1,0 +1,117 @@
+.navbar {
+  font-size: 17px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  top: 0;
+  left: 0;
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+}
+.material-symbols-outlined {
+  padding: 0 20px;
+  color: black;
+  transition: 0.4s ease;
+}
+
+.material-symbols-outlined:hover {
+  color: var(--color-primario2);
+}
+.navbar h2 {
+  margin-left: 20px;
+}
+.navbar li {
+  list-style: none;
+  font-size: 1.5rem;
+}
+.navbar span {
+  padding: 0 0.7px;
+  transition: 0.4s ease;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 5px;
+}
+@media only screen and (max-width: 990px) {
+  .nav-buttons {
+    margin: 10px;
+  }
+
+  .nav-buttons ul {
+    margin: 1rem;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .navbar form {
+    width: 10px;
+  }
+  .navbar .no-link-style {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .nav-buttons ul .fas {
+    margin: 2px 5px 10px 20px;
+  }
+}
+.navbar-collapse {
+  z-index: 99;
+}
+.navbar-collapse ul {
+  margin-left: 10px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.navbar-collapse li {
+  padding-right: 10px;
+}
+.nav-link {
+  font-weight: 800;
+}
+.btn {
+  border-color: var(--color-primario2);
+}
+
+/** 
+* ? Navbar-admin extra css
+*/
+.container-divisor {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.container-title-admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sub-title {
+  color: var(--color-sub-titles-purple);
+}
+
+.icon-change-color:hover {
+  fill: var(--color-primario2);
+}
+
+.select-line-button {
+  width: 100%;
+  height: 0.2rem;
+  border-radius: 10px;
+  background-color: #ba2afde8;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.select-line-button.active {
+  opacity: 1;
+}
+
+.user-list-button {
+  background-color: #7800b02f !important;
+  border-radius: 10px;
+  margin-top: .2em;
+}
+
+.text-customer-list {
+  color: var(--color-primario2);
+}
