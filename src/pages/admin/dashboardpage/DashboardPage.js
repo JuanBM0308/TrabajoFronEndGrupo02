@@ -1,4 +1,4 @@
-import "./contactpage.css";
+import "./dashboardpage.css";
 
 import React from "react";
 
