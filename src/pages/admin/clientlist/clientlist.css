@@ -1,0 +1,140 @@
+/**
+* ? options path
+*/
+.menuoptions-customer-info-customer-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuoptions-divisor {
+    display: flex;
+    align-items: center;
+    margin: .5rem;
+    gap: 1rem;
+}
+
+.button-export {
+    background-color: #7800b02f !important;
+    border-radius: 10px;
+}
+
+.button-customer-select {
+    background-color: var(--color-primario2) !important;
+    border-radius: 10px;
+}
+
+.option-export {
+    font-weight: 500;
+    color: var(--color-primario2);
+    margin-left: 1rem;
+}
+
+.option-customer-select {
+    font-weight: 500;
+    color: #ffff;
+    margin-left: 1rem;
+}
+
+/** 
+* ? customer list
+*/
+.container-content-list {
+    margin: 2rem;
+}
+
+th {
+    font-weight: 600;
+}
+
+td {
+    font-weight: 600;
+}
+
+.table th, .table td {
+    vertical-align: middle;
+}
+
+.image-list {
+    width: 4rem;
+    height: 4rem;
+    border: 1px var(--color-primario2) solid;
+}
+
+.customer-email {
+    font-weight: 400;
+}
+
+.customer-created {
+    font-weight: 400;
+}
+
+.customer-status-true {
+    background-color: #e8faf7 !important;
+}
+
+.customer-status-false {
+    background-color: #ffedef !important;
+}
+
+.status-text-true {
+    font-weight: 500;
+    color: #1a9984;
+}
+
+.status-text-false {
+    font-weight: 500;
+    color: #eb3d4e;
+}
+
+.icon-actions {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 5rem;
+}
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 0.9em;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--color-primario2);
+    border-color: var(--color-primario2);
+}
+
+.pagination .page-link {
+    color: var(--color-primario2);
+}
+
+.pagination .page-link:hover {
+    background-color: #ede9fe;
+}
+
+.container-customer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.customer-numeration {
+    font-weight: 500;
+    color: #7607c0 !important;
+    background-color: #7607c028 !important;
+    border-radius: 10px;
+}
+
+.customer-numeration-active {
+    font-weight: 500;
+    color: #fff !important;
+    background-color: #7607c0 !important;
+    border-radius: 10px;
+}
+
+/* li {
+    margin: .5rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 20px;
+} */
