@@ -11,13 +11,13 @@ const ClientInformationPage = () => {
 
   const handleChange = (event) => {
     const selectedValue = event.target.value;
-    
+
     if (selectedValue === "customer-info") {
       navigate("/admin/client-information-page");
     } else if (selectedValue === "customer-list") {
-      navigate("/");
+      navigate("/admin/client-list");
     }
-  }
+  };
 
   return (
     <section className="container-customer-info">

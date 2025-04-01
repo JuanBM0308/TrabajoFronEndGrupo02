@@ -18,6 +18,7 @@ import SearchPage from "./pages/searchPage/SearchPage.js";
 import SignInPage from "./pages/signinpage/SignInPage.js";
 import DashboardPage from "./pages/admin/dashboardpage/DashboardPage.js";
 import ClientInformationPage from "./pages/admin/clientinformationpage/ClientInformationPage.js";
+import Clientlist from "./pages/admin/clientlist/Clientlist.js";
 import ClientPage from "./pages/admin/clientpage/ClientPage.js";
 import SalePage from "./pages/admin/salepage/SalePage.js";
 
@@ -47,6 +48,8 @@ const App = () => {
           path="/admin/client-information-page"
           element={<ClientInformationPage />}
         />
+
+        <Route path="/admin/client-list" element={<Clientlist />} />
 
         <Route path="/admin/client-page" element={<ClientPage />} />
         <Route path="/admin/sale-page" element={<SalePage />} />
