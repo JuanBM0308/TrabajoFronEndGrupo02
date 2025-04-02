@@ -1,3 +1,7 @@
+:root {
+  --color-sub-titles-purple: #6a0dad; /* Define el color púrpura aquí */
+}
+
 .navbar {
   font-size: 17px;
   padding-top: 2rem;
@@ -86,7 +90,7 @@
 }
 
 .sub-title {
-  color: var(--color-sub-titles-purple);
+  color: var(--color-sub-titles-purple) !important; /* Asegúrate de que no sea sobrescrito */
 }
 
 .icon-change-color:hover {
