@@ -5,7 +5,7 @@ import './bannerHome.css'
 const BannerHome = () => {
   return (
     
-     <div className='contenedor overflow-hidden'>
+     <div className='contenedor overflow-hidden py-4'>
         <div className='row d-flex aling-center'>
             <div className='col-lg-5 col-sm-12   p-3 d-flex aling-center justify-center'>
                 <img className='w-100 h-75 ps-5' src={bannerImg}></img>
