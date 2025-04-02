@@ -1,0 +1,42 @@
+.carrusel-class h1{
+color: black;
+}
+
+.carousel-item{
+    height: 60vh;
+    padding: 10px;
+   
+}
+
+.tarjeta {
+    background-color: rgba(0, 0, 0, 0.241);
+    border-radius: 20px ;
+    height: 100%;
+    
+}
+
+.tarjeta img{
+    width: 100px;
+    border-radius: 50px;
+    margin: 30px 30px;
+    height: 100px;
+}
+
+.tag{
+    height: 60vh;
+    border-radius: 20px;
+   
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: brightness(0) saturate(100%) invert(12%) sepia(98%) saturate(7497%) hue-rotate(1deg) brightness(108%) contrast(128%);
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: transparent !important; /* Evita cambios de fondo */
+  
+
+}
