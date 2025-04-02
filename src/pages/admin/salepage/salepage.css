@@ -1,1 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); 
+
+.salepage-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+}
+
+.sale-page {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 24px;
+  padding: 24px;
+  background-color: #f3f4f6;
+  font-family: 'Inter', sans-serif;
+  flex-wrap: wrap;
+}  
+  
+.menuoptions-customer-info-customer-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menuoptions-title {
+  font-family: "Poppins", Arial;
+  font-weight: bold;
+  margin: 0.5rem 0;
+  font-size: 24px;
+  margin-left: 1rem;
+  margin-right: 10px;
+}
+
+.menuoptions-sub-title {
+  font-family: "Poppins", Arial;
+  font-weight: 400;
+  margin: 0.5rem 0;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+}
+
+.menuoptions-sub-title.purple {
+  color: #6a1b9a;
+}
+
+.menuoptions-divisor {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+.bi-caret-right-fill {
+  margin: 0 5px;
+}
+
+.button-export {
+  background-color: #7800b02f !important;
+  border-radius: 10px;
+}
+
+.button-customer-select {
+  background-color: var(--color-primario2) !important;
+  border-radius: 10px;
+}
+
+.option-export {
+  font-weight: 500;
+  color: var(--color-primario2);
+  margin-left: 1rem;
+}
+
+.option-customer-select {
+  font-weight: 500;
+  color: #ffff;
+  margin-left: 1rem;
+}
+
+.purple {
+  color: var(--color-sub-titles-purple);
+}
+
+.grey {
+  color: var(--color-sub-titles-grey);
+}
+
+.divisor-line {
+  width: 100%;
+  height: 2px;
+  opacity: 0.1;
+  background-color: var(--color-sub-titles-purple);
+  margin-top: 1rem;
+}
+
 
