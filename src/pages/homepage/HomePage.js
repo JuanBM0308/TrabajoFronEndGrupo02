@@ -6,6 +6,7 @@ import Footer from '../../components/layouts/footer/Footer';
 import Productlist from '../../components/layouts/productlist/Productlist';
 import Showcase from '../../components/layouts/showcase/Showcase';
 import BannerHome from '../../components/banner/bannerHome/BannerHome';
+import Testimonial from '../../components/testimonialSlider/Testimonial';
 
 const HomePage= ()=>{
     return(
@@ -15,6 +16,7 @@ const HomePage= ()=>{
         <Begin/> 
         <Banner/>
         <Productlist/>
+        <Testimonial/>
         <Footer/>
         
     </section>
