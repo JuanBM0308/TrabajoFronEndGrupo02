@@ -1,0 +1,71 @@
+/* MostSoldProducts.css */
+.most-sold-products {
+    margin: 0px 0;
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px #212529;
+  }
+  
+  .section-title {
+    align-items: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: Poppins, sans-serif;
+  }
+  
+  .product-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .product-name {
+    align-items: center;
+    flex: 1;
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .product-bar {
+    flex: 2;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 8px #212529;
+  }
+  
+  .bar-fill {
+    height: 100%;
+    background-color: #7607c0;
+    border-radius: 5px;
+    transition: width 0.4s ease;
+  }
+  
+  .product-percent {
+    width: 50px;
+    text-align: right;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .centered-title {
+    text-align: center;
+  }
+
+  .centered-text {
+    text-align: center;
+  }

@@ -1,0 +1,119 @@
+/* --- Lista de Compra --- */
+.compra-container {
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px #212529;
+    padding: 24px;
+    width: 100%;
+    overflow-x: auto;
+  }
+  
+  .compra-header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .compra-header h4 {
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .badge-orden {
+    background-color: #e9d5ff;
+    color: #6b21a8;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  
+  .tabla-compra {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    box-shadow: 0 4px 10px #212529;
+  }
+  
+  .tabla-compra th,
+  .tabla-compra td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #f3f4f6;
+    white-space: nowrap;
+  }
+  
+  .producto-desc {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .producto-img {
+    width: 40px;
+    height: 40px;
+    background-color: #e5e7eb;
+    border-radius: 8px;
+  }
+  
+  .subtext {
+    font-size: 12px;
+    color: #6b7280;
+  }
+  
+  /* Ajustes para celdas de resumen en columna "Precio" */
+  .precio-resumen {
+    text-align: right;
+    background-color: #f9fafb;
+    font-weight: 600;
+  }
+  
+  .resumen.total .precio-resumen {
+    background-color: #eef2ff;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    .tabla-compra {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .tabla-compra thead {
+      display: none;
+    }
+  
+    .tabla-compra tbody tr {
+      display: block;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #f1f1f1;
+      padding-bottom: 12px;
+    }
+  
+    .tabla-compra tbody tr td {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 12px;
+      font-size: 14px;
+      border: none;
+    }
+  
+    .tabla-compra tbody tr td::before {
+      content: attr(data-label);
+      font-weight: 600;
+      color: #6b7280;
+    }
+  
+    .producto-desc {
+      flex-direction: row;
+      gap: 12px;
+    }
+  
+    .producto-img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  

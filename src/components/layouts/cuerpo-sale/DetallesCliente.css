@@ -1,0 +1,38 @@
+/* --- Cliente --- */
+.cliente-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px #212529;
+    padding: 24px;
+    min-width: 280px;
+  }
+  
+  .cliente-container h4 {
+    margin-bottom: 16px;
+  }
+  
+  .cliente-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    gap: 12px;
+  }
+  
+  .cliente-item img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .cliente-item span {
+    color: #6b7280;
+    width: 100px;
+  }
+  
+  .cliente-item strong,
+  .cliente-item a {
+    color: #111827;
+    font-weight: 600;
+    text-decoration: none;
+  }
