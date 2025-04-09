@@ -1,22 +1,23 @@
-#login-form{
-    width: 50%;
-    margin: 5px auto;
-    text-align: center;
-    padding: 20px;
-    border-top:1px solid var(--color-primario);
+#login-form {
+    width: 50%; /* Ancho del formulario */
+    margin: 5px auto; /* Centrado horizontal con margen superior/inferior */
+    text-align: center; /* Centra el texto dentro del formulario */
+    padding: 20px; /* Espaciado interno */
+    border-top: 1px solid var(--color-primario); /* Línea superior con el color primario */
 }
 
-#login-form input{
-    width: 50%;
-    margin: 5px auto;
+#login-form input {
+    width: 50%; /* Los inputs ocuparán el 50% del ancho del formulario */
+    margin: 5px auto; /* Centrado horizontal y margen entre elementos */
 }
 
-#login-form #login-btn{
-    background-color: var(--color-primario);
-    color: #fff;
-    font-weight: 900;
+#login-form #login-btn {
+    background-color: var(--color-primario); /* Color de fondo del botón de login */
+    color: #fff; /* Color del texto blanco */
+    font-weight: 900; /* Texto en negrita */
 }
-#login-form #register-url{
-    color: var(--color-primario);
-    font-weight: 900;
+
+#login-form #register-url {
+    color: var(--color-primario); /* Color del texto del enlace de registro */
+    font-weight: 900; /* Negrita para el enlace */
 }

@@ -1,53 +1,60 @@
-.cart table{
-    width: 100%;
-    border-collapse: collapse;
-}
-.cart th{
-    text-align: left;
-    padding: 5px 10px;
-    color: #fff;
-    background-color:  var(--color-primario2);
-}
-.cart-total{
-    display: flex;
-    justify-content: flex-end;
-    
+/* Estilo para la tabla del carrito */
+.cart table {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    border-collapse: collapse; /* Elimina el espacio entre bordes de celdas */
 }
 
-.cart-total table{
-    width: 100%;
-    max-width: 500px;
-    border-top: 3px solid  var(--color-primario2);
-    
+/* Encabezados de la tabla del carrito */
+.cart th {
+    text-align: left; /* Alinea el texto a la izquierda */
+    padding: 5px 10px; /* Espaciado interno */
+    color: #fff; /* Color del texto */
+    background-color: var(--color-primario2); /* Fondo del encabezado usando una variable CSS */
 }
-td{
-font-weight: 800;
+
+/* Contenedor de totales del carrito */
+.cart-total {
+    display: flex; /* Usa flexbox */
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
 }
-td:last-child{
+
+/* Tabla de totales dentro del carrito */
+.cart-total table {
+    width: 100%; /* Ocupa todo el ancho posible */
+    max-width: 500px; /* Máximo ancho de la tabla */
+    border-top: 3px solid var(--color-primario2); /* Borde superior con color personalizado */
+}
+
+/* Estilo general para celdas */
+td {
+    font-weight: 800; /* Negrita */
+}
+
+/* Alinea la última celda de cada fila a la derecha */
+td:last-child {
     text-align: right;
     font-weight: 800;
 }
 
-
-th:last-child{
+/* Alinea la última cabecera de la tabla a la derecha */
+th:last-child {
     text-align: right;
-    
 }
 
-.checkout-container{
-display: flex;
-justify-content: flex-end;
-
-
-}
-.checkout-container .checkout-btn{
-background-color: var(--color-primario);
-font-weight: bold;
+/* Contenedor del botón de continuar */
+.checkout-container {
+    display: flex; /* Usa flexbox */
+    justify-content: flex-end; /* Alinea el botón a la derecha */
 }
 
-.checkout-container .checkout-btn:hover{
-color:#fff;
-background-color: var(--color-primario2);
+/* Estilo del botón de checkout */
+.checkout-container .checkout-btn {
+    background-color: var(--color-primario); /* Color de fondo */
+    font-weight: bold; /* Texto en negrita */
+}
 
-
+/* Hover del botón de checkout */
+.checkout-container .checkout-btn:hover {
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+    background-color: var(--color-primario2); /* Cambia el fondo al pasar el mouse */
 }

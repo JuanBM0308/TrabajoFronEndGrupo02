@@ -1,32 +1,35 @@
-import "./editaccountpage.css";
+import "./editaccountpage.css"; // Importa estilos específicos para esta página
 
 import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { getUserFromToken } from "../../util/Auth";
+import { getUserFromToken } from "../../util/Auth"; // Función para obtener el usuario desde el token
 
 import Footer from "../../components/layouts/footer/Footer";
 import Navbar from "../../components/layouts/navbar/Navbar";
 
+// Componente de la página para editar la cuenta del usuario
 const EditAccountPage = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Hook para redirigir
 
+  // Estados para almacenar datos del usuario
   const [user, setUser] = useState(null);
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
 
-  // Función para obtener los datos del usuario actual
+  // Al montar el componente, obtiene el usuario desde el token
   useEffect(() => {
     const userFromToken = getUserFromToken();
 
     if (userFromToken) {
       setUser(userFromToken);
     } else {
-      navigate("/signin");
+      navigate("/signin"); // Si no hay usuario, redirige a login
     }
   }, []);
 
+  // Valida los datos y guarda los cambios
   const validateAndSave = () => {
     if (!name.trim()) {
       toast.error("El nombre es obligatorio");
@@ -42,7 +45,7 @@ const EditAccountPage = () => {
     }
 
     toast.success("Cambios guardados correctamente");
-    navigate("/account");
+    navigate("/account"); // Simula guardar y redirige
   };
 
   return (
@@ -52,6 +55,7 @@ const EditAccountPage = () => {
         {user ? (
           <div className="my-5 py-5">
             <div className="row container mx-auto account-container">
+              {/* Imagen de perfil */}
               <div className="text-center mt-3 pt-5 col-lg-4 col-md-12 col-sm-12">
                 <img
                   src="/usericon.png"
@@ -60,8 +64,10 @@ const EditAccountPage = () => {
                 />
               </div>
 
+              {/* Formulario de edición */}
               <div className="form-container col-lg-8 col-md-12 col-sm-12">
                 <div className="form-group col-lg-6 col-md-12 col-sm-12">
+                  {/* Nombre */}
                   <div className="form-group">
                     <label>Nombre</label>
                     <input
@@ -76,6 +82,7 @@ const EditAccountPage = () => {
                     />
                   </div>
 
+                  {/* Email */}
                   <div className="form-group">
                     <label>Email</label>
                     <input
@@ -92,6 +99,7 @@ const EditAccountPage = () => {
                 </div>
 
                 <div className="form-group col-lg-6 col-md-12 col-sm-12">
+                  {/* Teléfono */}
                   <div className="form-group">
                     <label>Telefono</label>
                     <input
@@ -106,6 +114,7 @@ const EditAccountPage = () => {
                     />
                   </div>
 
+                  {/* Botón para cambiar contraseña */}
                   <div className="form-group">
                     <label></label>
                     <button
@@ -121,12 +130,14 @@ const EditAccountPage = () => {
                 </div>
               </div>
 
+              {/* Botón para guardar cambios */}
               <button className="save-account-btn" onClick={validateAndSave}>
                 Guardar cambios
               </button>
             </div>
           </div>
         ) : (
+          // Si no hay datos del usuario
           <div className="text-center mt-5 pt-5">
             <h3>No hay información de usuario disponible</h3>
           </div>

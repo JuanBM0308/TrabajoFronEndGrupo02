@@ -1,140 +1,146 @@
 /**
 * ? options path
+* Estilos para la sección de opciones (navegación entre cliente/info)
 */
 .menuoptions-customer-info-customer-list {
-    display: flex;
-    justify-content: space-between;
+    display: flex; /* Distribuye los elementos hijos en línea */
+    justify-content: space-between; /* Espacio entre los extremos */
 }
 
 .menuoptions-divisor {
-    display: flex;
-    align-items: center;
-    margin: .5rem;
-    gap: 1rem;
+    display: flex; /* Elementos en línea */
+    align-items: center; /* Centrado vertical */
+    margin: .5rem; /* Margen exterior */
+    gap: 1rem; /* Espaciado entre elementos */
 }
 
 .button-export {
-    background-color: #7800b02f !important;
-    border-radius: 10px;
+    background-color: #7800b02f !important; /* Fondo morado con opacidad */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
 .button-customer-select {
-    background-color: var(--color-primario2) !important;
+    background-color: var(--color-primario2) !important; /* Color primario definido en variables */
     border-radius: 10px;
 }
 
 .option-export {
-    font-weight: 500;
-    color: var(--color-primario2);
-    margin-left: 1rem;
+    font-weight: 500; /* Grosor de fuente medio */
+    color: var(--color-primario2); /* Color primario */
+    margin-left: 1rem; /* Espaciado a la izquierda */
 }
 
 .option-customer-select {
     font-weight: 500;
-    color: #ffff;
+    color: #ffff; /* Texto blanco */
     margin-left: 1rem;
 }
 
 /** 
 * ? customer list
+* Estilos específicos para la tabla de clientes
 */
 .container-content-list {
-    margin: 2rem;
+    margin: 2rem; /* Margen general */
 }
 
 th {
-    font-weight: 600;
+    font-weight: 600; /* Encabezados más pesados */
 }
 
 td {
-    font-weight: 600;
+    font-weight: 600; /* Celdas también con peso fuerte */
 }
 
 .table th, .table td {
-    vertical-align: middle;
+    vertical-align: middle; /* Centrado vertical del contenido */
 }
 
 .image-list {
-    width: 4rem;
-    height: 4rem;
-    border: 1px var(--color-primario2) solid;
+    width: 4rem; /* Ancho de imagen */
+    height: 4rem; /* Altura de imagen */
+    border: 1px var(--color-primario2) solid; /* Borde con color primario */
 }
 
 .customer-email {
-    font-weight: 400;
+    font-weight: 400; /* Email con menor peso */
 }
 
 .customer-created {
-    font-weight: 400;
+    font-weight: 400; /* Fecha también más ligera */
 }
 
 .customer-status-true {
-    background-color: #e8faf7 !important;
+    background-color: #e8faf7 !important; /* Verde claro para activos */
 }
 
 .customer-status-false {
-    background-color: #ffedef !important;
+    background-color: #ffedef !important; /* Rojo claro para bloqueados */
 }
 
 .status-text-true {
     font-weight: 500;
-    color: #1a9984;
+    color: #1a9984; /* Verde para estado activo */
 }
 
 .status-text-false {
     font-weight: 500;
-    color: #eb3d4e;
+    color: #eb3d4e; /* Rojo para estado bloqueado */
 }
 
 .icon-actions {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 5rem;
+    display: flex; /* Íconos en línea */
+    justify-content: space-around; /* Espaciado uniforme */
+    align-items: center; /* Centrado vertical */
+    height: 5rem; /* Altura del contenedor */
 }
 
 .badge {
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-size: 0.9em;
+    padding: 5px 10px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    font-size: 0.9em; /* Tamaño ligeramente menor */
 }
 
+/* Estilos para la paginación */
 .pagination .page-item.active .page-link {
-    background-color: var(--color-primario2);
-    border-color: var(--color-primario2);
+    background-color: var(--color-primario2); /* Fondo activo */
+    border-color: var(--color-primario2); /* Borde activo */
 }
 
 .pagination .page-link {
-    color: var(--color-primario2);
+    color: var(--color-primario2); /* Color del texto */
 }
 
 .pagination .page-link:hover {
-    background-color: #ede9fe;
+    background-color: #ede9fe; /* Hover con tono morado claro */
 }
 
 .container-customer-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Elementos en fila */
+    justify-content: space-between; /* Separación entre información y paginación */
+    align-items: center; /* Alineación vertical */
 }
 
 .customer-numeration {
     font-weight: 500;
-    color: #7607c0 !important;
-    background-color: #7607c028 !important;
+    color: #7607c0 !important; /* Color morado oscuro */
+    background-color: #7607c028 !important; /* Fondo morado claro con opacidad */
     border-radius: 10px;
 }
 
 .customer-numeration-active {
     font-weight: 500;
-    color: #fff !important;
-    background-color: #7607c0 !important;
+    color: #fff !important; /* Texto blanco */
+    background-color: #7607c0 !important; /* Fondo morado intenso */
     border-radius: 10px;
 }
 
-/* li {
+/* Estilos comentados que podrían usarse para los elementos de la paginación */
+/*
+li {
     margin: .5rem;
     height: 2rem;
     width: 2rem;
     border-radius: 20px;
-} */
+}
+*/

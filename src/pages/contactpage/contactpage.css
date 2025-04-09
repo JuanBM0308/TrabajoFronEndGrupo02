@@ -1,9 +1,11 @@
+/* Estilo para todos los párrafos dentro del elemento con ID "contact" */
 #contact p {
-    color: var(--color-primario2);
-    font-weight: 700;
+    color: var(--color-primario2);  /* Aplica el color definido como primario2 en las variables */
+    font-weight: 700;               /* Aplica negrita al texto */
 }
 
-#contact p span{
-    color: var(--color-primario2);
-    font-weight: 700;
+/* Estilo específico para los elementos <span> dentro de los párrafos en #contact */
+#contact p span {
+    color: var(--color-primario2);  /* El color también se aplica al texto del <span> */
+    font-weight: 700;               /* Mantiene el mismo grosor de fuente (negrita) */
 }

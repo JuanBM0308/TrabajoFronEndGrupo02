@@ -1,21 +1,21 @@
-.relative{
-position: relative;
-}
-
-.searh-container{
-box-shadow: none;
-padding-top: 10%;
-}
-.search-container{
-width:50% ;
-margin: auto;
-box-shadow: 4px 4px 15px #cac5c5;
-
-}
-
-.searh-container h2{
-    text-align: center;
-    padding: 1rem;
-    font-weight: bold;
-}
-
+.relative {
+    position: relative; /* Establece posición relativa para usarlo como referencia en hijos posicionados */
+  }
+  
+  .searh-container {
+    box-shadow: none; /* No se aplica sombra al contenedor principal */
+    padding-top: 10%; /* Espacio arriba del contenido */
+  }
+  
+  .search-container {
+    width: 50%; /* Ancho del contenedor de búsqueda */
+    margin: auto; /* Centra horizontalmente */
+    box-shadow: 4px 4px 15px #cac5c5; /* Sombra suave alrededor del contenedor */
+  }
+  
+  .searh-container h2 {
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 1rem; /* Espaciado interno */
+    font-weight: bold; /* Texto en negrita */
+  }
+  

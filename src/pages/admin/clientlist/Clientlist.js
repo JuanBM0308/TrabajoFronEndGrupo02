@@ -1,17 +1,28 @@
+// Importación de estilos específicos para este componente
 import "./clientlist.css";
+
+// Importación de una imagen de usuario por defecto
 import userImage from "../../../assets/imgs/image-user.webp";
 
+// Importaciones de React
 import React from "react";
+
+// Hook para redireccionamiento entre rutas
 import { useNavigate } from "react-router-dom";
 
+// Importación del componente de navegación del administrador
 import NavbarAdmin from "../../../components/layouts/navbar-admin/Navbar-admin";
 
+// Componente funcional principal Clientlist
 const Clientlist = () => {
+  // Hook para navegar entre rutas
   const navigate = useNavigate();
 
+  // Maneja el cambio de la opción seleccionada en el dropdown
   const handleChange = (event) => {
     const selectedValue = event.target.value;
 
+    // Redirecciona dependiendo del valor seleccionado
     if (selectedValue === "customer-info") {
       navigate("/admin/client-information-page");
     } else if (selectedValue === "customer-list") {
@@ -20,15 +31,20 @@ const Clientlist = () => {
   };
 
   return (
+    // Contenedor principal de la lista de clientes
     <section className="container-customer-list">
-      {/* Navbar admin */}
+
+      {/* Barra de navegación del admin */}
       <NavbarAdmin />
 
-      {/* options path */}
+      {/* Sección de navegación entre opciones de clientes */}
       <div class="menuoptions-customer-info-customer-list">
         <div className="menuoptions-divisor">
+          {/* Título y subtítulo de la sección */}
           <h2 className="menuoptions-title">Clientes</h2>
           <h4 className="menuoptions-sub-title purple">Lista de Clientes</h4>
+
+          {/* Flecha indicadora entre opciones */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -39,6 +55,8 @@ const Clientlist = () => {
           >
             <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
           </svg>
+
+          {/* Menú desplegable para cambiar de vista */}
           <p className="menuoptions-sub-title">
             <select
               className="customer-options grey"
@@ -50,8 +68,11 @@ const Clientlist = () => {
             </select>
           </p>
         </div>
+
+        {/* Botones de acciones superiores: Exportar y Ver Cliente */}
         <div className="menuoptions-divisor">
           <button type="button" class="button-export btn">
+            {/* Icono de descarga */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -65,7 +86,9 @@ const Clientlist = () => {
             </svg>
             <span className="option-export">Export</span>
           </button>
+
           <button type="button" class="button-customer-select btn">
+            {/* Icono de agregar cliente */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
@@ -86,12 +109,13 @@ const Clientlist = () => {
         </div>
       </div>
 
-      {/* Customer list */}
+      {/* Tabla de lista de clientes */}
       <div className="container-content-list  mt-4">
         <table className="table table-hover">
           <thead className="table">
             <tr>
               <th>
+                {/* Checkbox de selección múltiple */}
                 <input type="checkbox" />
               </th>
               <th>Name</th>
@@ -102,6 +126,7 @@ const Clientlist = () => {
             </tr>
           </thead>
           <tbody>
+            {/* Primer cliente */}
             <tr>
               <td>
                 <input type="checkbox" />
@@ -125,6 +150,7 @@ const Clientlist = () => {
                 </button>
               </td>
               <td className="icon-actions">
+                {/* Acciones: Editar, Ver, Eliminar */}
                 <a href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -134,7 +160,7 @@ const Clientlist = () => {
                     class="bi bi-pen-fill"
                     viewBox="0 0 16 16"
                   >
-                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001" />
+                    <path d="..." />
                   </svg>
                 </a>
 
@@ -147,8 +173,8 @@ const Clientlist = () => {
                     class="bi bi-eye-fill"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
-                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                    <path d="..." />
+                    <path d="..." />
                   </svg>
                 </a>
 
@@ -161,11 +187,13 @@ const Clientlist = () => {
                     class="bi bi-trash-fill"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                    <path d="..." />
                   </svg>
                 </a>
               </td>
             </tr>
+
+            {/* Segundo cliente */}
             <tr>
               <td>
                 <input type="checkbox" />
@@ -189,6 +217,7 @@ const Clientlist = () => {
                 </button>
               </td>
               <td className="icon-actions">
+                {/* Acciones: Editar, Ver, Eliminar */}
                 <a href="#">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -198,7 +227,7 @@ const Clientlist = () => {
                     class="bi bi-pen-fill"
                     viewBox="0 0 16 16"
                   >
-                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001" />
+                    <path d="..." />
                   </svg>
                 </a>
 
@@ -211,8 +240,8 @@ const Clientlist = () => {
                     class="bi bi-eye-fill"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0" />
-                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7" />
+                    <path d="..." />
+                    <path d="..." />
                   </svg>
                 </a>
 
@@ -225,7 +254,7 @@ const Clientlist = () => {
                     class="bi bi-trash-fill"
                     viewBox="0 0 16 16"
                   >
-                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0" />
+                    <path d="..." />
                   </svg>
                 </a>
               </td>
@@ -233,53 +262,54 @@ const Clientlist = () => {
           </tbody>
         </table>
 
-        {/* Pagination */}
+        {/* Paginación de la lista */}
         <div className="container-customer-nav">
-        <span>Showing 1-10 from 100</span>
-        <nav>
-          <ul className="pagination justify-content-end">
-            <li className="page-item disabled">
-              <a className="customer-numeration page-link">&lt;</a>
-            </li>
-            <li className="page-item active">
-              <a className="customer-numeration-active page-link" href="#">
-                1
-              </a>
-            </li>
-            <li className="page-item">
-              <a className="customer-numeration page-link" href="#">
-                2
-              </a>
-            </li>
-            <li className="page-item">
-              <a className="customer-numeration page-link" href="#">
-                3
-              </a>
-            </li>
-            <li className="page-item">
-              <a className="customer-numeration page-link" href="#">
-                4
-              </a>
-            </li>
-            <li className="page-item">
-              <a className="customer-numeration page-link" href="#">
-                5
-              </a>
-            </li>
-            <li className="page-item disabled">
-              <a className="customer-numeration customer-numeration page-link">
-                ...
-              </a>
-            </li>
-            <li className="page-item">
-              <a className="customer-numeration page-link">&gt;</a>
-            </li>
-          </ul>
-        </nav>
+          <span>Showing 1-10 from 100</span>
+          <nav>
+            <ul className="pagination justify-content-end">
+              <li className="page-item disabled">
+                <a className="customer-numeration page-link">&lt;</a>
+              </li>
+              <li className="page-item active">
+                <a className="customer-numeration-active page-link" href="#">
+                  1
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="customer-numeration page-link" href="#">
+                  2
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="customer-numeration page-link" href="#">
+                  3
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="customer-numeration page-link" href="#">
+                  4
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="customer-numeration page-link" href="#">
+                  5
+                </a>
+              </li>
+              <li className="page-item disabled">
+                <a className="customer-numeration customer-numeration page-link">
+                  ...
+                </a>
+              </li>
+              <li className="page-item">
+                <a className="customer-numeration page-link">&gt;</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </section>
   );
 };
 
+// Exportación del componente
 export default Clientlist;

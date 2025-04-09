@@ -1,97 +1,111 @@
+/* Importación de fuente Poppins desde Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap'); 
 
+/* Contenedor general de la página de ventas */
 .salepage-container {
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  min-height: 100vh;
+  display: flex; /* Usa Flexbox */
+  flex-direction: column; /* Dirección vertical */
+  background-color: #f9f9f9; /* Color de fondo claro */
+  min-height: 100vh; /* Altura mínima de toda la pantalla */
 }
 
+/* Sección principal de la página de ventas */
 .sale-page {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 24px;
-  padding: 24px;
-  background-color: #f3f4f6;
-  font-family: 'Inter', sans-serif;
-  flex-wrap: wrap;
+  display: flex; /* Usa Flexbox */
+  justify-content: center; /* Centra el contenido horizontalmente */
+  margin-bottom: 20px; /* Margen inferior */
+  gap: 24px; /* Espacio entre los elementos */
+  padding: 24px; /* Espaciado interno */
+  background-color: #f3f4f6; /* Fondo ligeramente gris */
+  font-family: 'Inter', sans-serif; /* Fuente Inter (asegúrate de haberla importado si se usa) */
+  flex-wrap: wrap; /* Permite que los elementos se acomoden en varias líneas */
 }  
   
+/* Contenedor de opciones del cliente */
 .menuoptions-customer-info-customer-list {
-  display: flex;
-  justify-content: space-between;
+  display: flex; /* Flexbox */
+  justify-content: space-between; /* Espacia los elementos al extremo */
 }
 
+/* Título principal de la sección de opciones */
 .menuoptions-title {
-  font-family: "Poppins", Arial;
-  font-weight: bold;
-  margin: 0.5rem 0;
-  font-size: 24px;
-  margin-left: 1rem;
-  margin-right: 10px;
+  font-family: "Poppins", Arial; /* Fuente */
+  font-weight: bold; /* Negrita */
+  margin: 0.5rem 0; /* Margen vertical */
+  font-size: 24px; /* Tamaño de fuente */
+  margin-left: 1rem; /* Margen izquierdo */
+  margin-right: 10px; /* Margen derecho */
 }
 
+/* Subtítulo dentro de la sección de opciones */
 .menuoptions-sub-title {
-  font-family: "Poppins", Arial;
-  font-weight: 400;
-  margin: 0.5rem 0;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 18px;
+  font-family: "Poppins", Arial; /* Fuente */
+  font-weight: 400; /* Peso normal */
+  margin: 0.5rem 0; /* Margen vertical */
+  margin-left: 5px; /* Margen izquierdo */
+  margin-right: 5px; /* Margen derecho */
+  font-size: 18px; /* Tamaño de fuente */
 }
 
+/* Variante morada para el subtítulo */
 .menuoptions-sub-title.purple {
-  color: #6a1b9a;
+  color: #6a1b9a; /* Color púrpura */
 }
 
+/* Línea divisora horizontal con ítems alineados */
 .menuoptions-divisor {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  gap: 1rem;
+  display: flex; /* Flexbox */
+  align-items: center; /* Centrado vertical */
+  margin-bottom: 20px; /* Margen inferior */
+  gap: 1rem; /* Espacio entre elementos */
 }
 
+/* Icono específico de Bootstrap (bi-caret-right-fill) con margen horizontal */
 .bi-caret-right-fill {
-  margin: 0 5px;
+  margin: 0 5px; /* Margen izquierdo y derecho */
 }
 
+/* Estilo para botón de exportar */
 .button-export {
-  background-color: #7800b02f !important;
-  border-radius: 10px;
+  background-color: #7800b02f !important; /* Color de fondo semitransparente púrpura */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Botón para seleccionar cliente */
 .button-customer-select {
-  background-color: var(--color-primario2) !important;
-  border-radius: 10px;
+  background-color: var(--color-primario2) !important; /* Color definido por variable */
+  border-radius: 10px; /* Bordes redondeados */
 }
 
+/* Texto de la opción de exportar */
 .option-export {
-  font-weight: 500;
-  color: var(--color-primario2);
-  margin-left: 1rem;
+  font-weight: 500; /* Peso medio */
+  color: var(--color-primario2); /* Color primario definido por variable */
+  margin-left: 1rem; /* Margen izquierdo */
 }
 
+/* Texto de la opción de selección de cliente */
 .option-customer-select {
-  font-weight: 500;
-  color: #ffff;
-  margin-left: 1rem;
+  font-weight: 500; /* Peso medio */
+  color: #ffff; /* Color blanco */
+  margin-left: 1rem; /* Margen izquierdo */
 }
 
+/* Clase auxiliar para aplicar color púrpura */
 .purple {
-  color: var(--color-sub-titles-purple);
+  color: var(--color-sub-titles-purple); /* Color definido en variable */
 }
 
+/* Clase auxiliar para aplicar color gris */
 .grey {
-  color: var(--color-sub-titles-grey);
+  color: var(--color-sub-titles-grey); /* Color definido en variable */
 }
 
+/* Línea divisora horizontal decorativa */
 .divisor-line {
-  width: 100%;
-  height: 2px;
-  opacity: 0.1;
-  background-color: var(--color-sub-titles-purple);
-  margin-top: 1rem;
+  width: 100%; /* Ancho completo */
+  height: 2px; /* Altura de la línea */
+  opacity: 0.1; /* Transparencia baja */
+  background-color: var(--color-sub-titles-purple); /* Color de fondo */
+  margin-top: 1rem; /* Margen superior */
 }
-
-

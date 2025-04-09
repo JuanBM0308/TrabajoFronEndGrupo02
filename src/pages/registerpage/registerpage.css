@@ -1,27 +1,28 @@
-#register-form{
-    width: 50%;
-    margin: 5px auto;
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid var(--color-primario2);
+#register-form {
+    width: 50%; /* El formulario ocupa el 50% del ancho del contenedor */
+    margin: 5px auto; /* Centrado horizontal y pequeño margen vertical */
+    text-align: center; /* Centra el texto dentro del formulario */
+    padding: 20px; /* Espaciado interno */
+    border-top: 1px solid var(--color-primario2); /* Línea superior con color personalizado */
 }
 
-#register-form input{
-    width: 50%;
-    margin: 5px auto;
-}
-.form-group label{
-padding-top: 3px;
-font-weight: bold;
+#register-form input {
+    width: 50%; /* Inputs al 50% del ancho del formulario */
+    margin: 5px auto; /* Centrado y separación entre inputs */
 }
 
-#register-form #register-btn{
-    background-color:var(--color-primario);
-    color: #fff;
-    font-weight: 900;
+.form-group label {
+    padding-top: 3px; /* Espacio encima del texto del label */
+    font-weight: bold; /* Texto en negrita */
 }
 
-#register-form #register-url{
-    color:var(--color-primario2);
-    font-weight: 900;
+#register-form #register-btn {
+    background-color: var(--color-primario); /* Color de fondo personalizado para el botón */
+    color: #fff; /* Texto blanco */
+    font-weight: 900; /* Negrita intensa */
+}
+
+#register-form #register-url {
+    color: var(--color-primario2); /* Color personalizado para el link */
+    font-weight: 900; /* Negrita intensa */
 }

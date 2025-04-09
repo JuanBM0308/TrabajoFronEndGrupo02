@@ -1,75 +1,87 @@
+/* Estilos para el formulario principal */
 #account-form {
-  width: 50%;
-  margin: 25px auto;
+  width: 50%; /* Ocupa el 50% del ancho del contenedor */
+  margin: 25px auto; /* Centrado vertical y horizontal */
   text-align: center;
   padding: 20px;
 }
 
+/* Estilos para los inputs dentro del formulario */
 #account-form input {
   margin: 5px auto;
 }
 
+/* Botón para cambiar contraseña */
 #account-form #change-pass-btn {
   color: #fff;
   font-weight: 900;
-  background-color: var(--color-primario2);
+  background-color: var(--color-primario2); /* Usa variable de color */
 }
 
+/* Botones de la sección de información de cuenta */
 .account-info #order-btn,
 #logout-btn {
   color: var(--color-primario2);
   text-decoration: none;
 }
 
+/* Imagen del usuario (foto de perfil) */
 .edit-user-image {
   width: 250px;
   height: 250px;
-  border-radius: 50%;
-  object-fit: cover;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Ajusta bien la imagen al contenedor */
   margin-bottom: 10px;
   align-items: center;
   justify-content: center;
 }
 
+/* Contenedor del formulario */
 .form-container {
-  display: flex;
+  display: flex; /* Pone campos uno al lado del otro */
   align-items: center;
   justify-content: center;
   padding-top: 80px;
 }
 
+/* Margen horizontal entre grupos de campos */
 .form-container .form-group {
   margin: 0 10px;
 }
 
+/* Espaciado inferior para inputs */
 .edit-input {
   margin-bottom: 25px;
 }
 
+/* Botón de cambiar contraseña */
 .change-password-btn {
   background-color: #fff;
   color: #000 !important;
   font-weight: 900 !important;
   border: 2px solid #222222 !important;
-  display: flex !important; /* Usa flexbox */
-  align-items: center; /* Alinea verticalmente */
-  padding: 10px 15px; /* Espaciado interno */
+  display: flex !important;
+  align-items: center;
+  padding: 10px 15px;
   transition: all 0.3s ease-in-out !important;
   justify-content: space-between;
 }
 
+/* Texto del botón de cambiar contraseña */
 .btn-text {
-  text-align: left; /* Alinea el texto a la izquierda */
-  font-size: 16px; /* Tamaño de fuente del texto */
+  text-align: left;
+  font-size: 16px;
   align-items: center !important;
 }
 
+/* Icono del lápiz para editar */
 .edit-icon {
   font-size: 20px;
   color: #222222;
   align-items: center !important;
 }
 
+/* Hover en botón cambiar contraseña */
 .change-password-btn:hover {
   background-color: #bdbdbd;
   border: 2px solid #949494;
@@ -77,6 +89,7 @@
   cursor: pointer;
 }
 
+/* Botón para guardar cambios */
 .save-account-btn {
   margin: 25px auto 0;
   background-color: #fff;
@@ -87,6 +100,7 @@
   max-width: 250px !important;
 }
 
+/* Hover del botón guardar */
 .save-account-btn:hover {
   background-color: #222222;
   opacity: 0.9;

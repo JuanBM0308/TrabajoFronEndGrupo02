@@ -5,28 +5,32 @@ import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { getUserFromToken } from "../../util/Auth";
 
+// Componentes de layout
 import Footer from "../../components/layouts/footer/Footer";
 import Navbar from "../../components/layouts/navbar/Navbar";
 
+// Página de cambio de contraseña del usuario
 const ChangePasswordAccountPage = () => {
   const navigate = useNavigate();
 
-  const [users, setUsers] = useState([]); // Estado para almacenar los usuarios
-  const [user, setUser] = useState(null);
-  const [currentPassword, setCurrentPassword] = useState("");
-  const [newPassword, setNewPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  // Estados para los datos del formulario y usuarios
+  const [users, setUsers] = useState([]); // Lista de usuarios cargados desde JSON
+  const [user, setUser] = useState(null); // Usuario autenticado
+  const [currentPassword, setCurrentPassword] = useState(""); // Contraseña actual
+  const [newPassword, setNewPassword] = useState(""); // Nueva contraseña
+  const [confirmPassword, setConfirmPassword] = useState(""); // Confirmación de nueva contraseña
 
-  // Función para obtener los datos del usuario actual
+  // Obtener usuario desde token y cargar usuarios desde archivo JSON si no están cargados
   useEffect(() => {
     const userFromToken = getUserFromToken();
 
     if (userFromToken) {
-      setUser(userFromToken);
+      setUser(userFromToken); // Guardar usuario autenticado
     } else {
-      navigate("/signin");
+      navigate("/signin"); // Redirigir a inicio de sesión si no hay usuario
     }
 
+    // Cargar lista de usuarios si aún no se ha hecho
     if (users.length === 0) {
       fetch("/users.json")
         .then((response) => response.json())
@@ -35,8 +39,9 @@ const ChangePasswordAccountPage = () => {
     }
   }, []);
 
+  // Validar campos y guardar nueva contraseña
   const validateAndSave = () => {
-    var currentUser = users.find((u) => u.email === user.email);
+    var currentUser = users.find((u) => u.email === user.email); // Buscar al usuario actual
 
     if (!currentPassword.trim()) {
       toast.error("La contraseña actual no puede estar vacía");
@@ -58,6 +63,8 @@ const ChangePasswordAccountPage = () => {
       return;
     }
 
+    // Aquí podrías guardar la nueva contraseña en el backend o local storage
+
     toast.success("Contraseña actualizada correctamente");
     navigate("/account");
   };
@@ -69,6 +76,7 @@ const ChangePasswordAccountPage = () => {
         {user ? (
           <div className="my-5 py-5">
             <div className="row container mx-auto mt-5">
+              {/* Imagen del usuario */}
               <div className="text-center mt-3 pt-5 col-lg-4 col-md-12 col-sm-12">
                 <img
                   src="/usericon.png"
@@ -77,6 +85,7 @@ const ChangePasswordAccountPage = () => {
                 />
               </div>
 
+              {/* Formulario de cambio de contraseña */}
               <div className="password-form-container col-lg-8 col-md-12 col-sm-12">
                 <p className="title-password">CAMBIAR CONTRASEÑA</p>
                 <hr></hr>
@@ -136,6 +145,7 @@ const ChangePasswordAccountPage = () => {
             </div>
           </div>
         ) : (
+          // Mensaje si no hay usuario autenticado
           <div className="text-center mt-5 pt-5">
             <h3>No hay información de usuario disponible</h3>
           </div>

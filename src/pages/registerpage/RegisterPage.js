@@ -1,34 +1,34 @@
-import "./registerpage.css";
-import "react-toastify/dist/ReactToastify.css";
+import "./registerpage.css"; // Estilos personalizados para esta página
+import "react-toastify/dist/ReactToastify.css"; // Estilos para los toasts de notificación
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react"; // Importación de React y hooks necesarios
 
-import { Link, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import { Link, useNavigate } from "react-router-dom"; // Link para navegación y useNavigate para redireccionamiento
+import { toast } from "react-toastify"; // Librería para mostrar notificaciones
 
-import Footer from "../../components/layouts/footer/Footer";
-import Navbar from "../../components/layouts/navbar/Navbar";
+import Footer from "../../components/layouts/footer/Footer"; // Footer del sitio
+import Navbar from "../../components/layouts/navbar/Navbar"; // Navbar del sitio
 
 const RegisterPage = () => {
-  const [, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
-  const [users, setUsers] = useState([]); // Estado para almacenar los usuarios
+  const [, setName] = useState(""); // Estado para el nombre, aunque no se usa (solo se actualiza)
+  const [email, setEmail] = useState(""); // Estado para el email
+  const [password, setPassword] = useState(""); // Estado para la contraseña
+  const [confirmPassword, setConfirmPassword] = useState(""); // Estado para confirmar la contraseña
+  const [users, setUsers] = useState([]); // Estado para almacenar los usuarios cargados
 
-  const navigate = useNavigate(); // Usa useNavigate
+  const navigate = useNavigate(); // Hook para redireccionar al usuario
 
   useEffect(() => {
-    if (users.length === 0) {
+    if (users.length === 0) { // Solo carga usuarios si el array está vacío
       fetch("/users.json")
         .then((response) => response.json())
-        .then((data) => setUsers(data))
-        .catch((error) => console.error("Error cargando usuarios:", error));
+        .then((data) => setUsers(data)) // Guarda los usuarios en el estado
+        .catch((error) => console.error("Error cargando usuarios:", error)); // Manejo de errores
     }
-  }, [users]);
+  }, [users]); // Dependencia: se ejecuta si cambia 'users'
 
   const handleRegister = async (e) => {
-    e.preventDefault();
+    e.preventDefault(); // Evita el comportamiento por defecto del formulario
 
     if (password !== confirmPassword) {
       toast.error("Las contraseñas no coinciden", {
@@ -39,7 +39,7 @@ const RegisterPage = () => {
     }
 
     const user = users.find(
-      (u) => u.email === email && u.password === password
+      (u) => u.email === email && u.password === password // Verifica si ya existe un usuario con ese email y contraseña
     );
 
     if (user) {
@@ -50,12 +50,12 @@ const RegisterPage = () => {
       return;
     }
 
-    const currentUser = users.find((u) => u.role === "user");
+    const currentUser = users.find((u) => u.role === "user"); // Toma el primer usuario con rol "user"
 
-    localStorage.setItem("access_token", currentUser.access_token);
+    localStorage.setItem("access_token", currentUser.access_token); // Guarda su token en localStorage
     toast.success("Inicio de sesión correcto", { position: "top-center" });
 
-    navigate("/account");
+    navigate("/account"); // Redirige al perfil del usuario
   };
 
   return (
@@ -78,7 +78,7 @@ const RegisterPage = () => {
                 id="register-name"
                 name="name"
                 placeholder="Nombre"
-                onChange={(e) => setName(e.target.value)}
+                onChange={(e) => setName(e.target.value)} // Actualiza el nombre
               />
             </div>
 
@@ -90,7 +90,7 @@ const RegisterPage = () => {
                 id="register-email"
                 name="Email"
                 placeholder="Correo electronico"
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={(e) => setEmail(e.target.value)} // Actualiza el email
               />
             </div>
 
@@ -102,7 +102,7 @@ const RegisterPage = () => {
                 id="register-password"
                 name="password"
                 placeholder="Contraseña"
-                onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)} // Actualiza la contraseña
               />
             </div>
 
@@ -114,7 +114,7 @@ const RegisterPage = () => {
                 id="register-confirm-password"
                 name="confirmpassword"
                 placeholder="Confirmar Contraseña"
-                onChange={(e) => setConfirmPassword(e.target.value)}
+                onChange={(e) => setConfirmPassword(e.target.value)} // Actualiza la confirmación de la contraseña
               />
             </div>
 
@@ -123,13 +123,13 @@ const RegisterPage = () => {
                 type="submit"
                 className="btn"
                 id="register-btn"
-                value="Register"
+                value="Register" // Botón para enviar el formulario
               />
             </div>
 
             <div className="form-group">
               <Link id="register-url" className="btn" to="/signin">
-                ¿Ya tienes una cuenta? Ingresar
+                ¿Ya tienes una cuenta? Ingresar // Link para ir al login
               </Link>
             </div>
           </form>

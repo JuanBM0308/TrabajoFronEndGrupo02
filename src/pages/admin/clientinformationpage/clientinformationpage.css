@@ -1,28 +1,30 @@
 /**
-* TODO: Imports tipografias google fonts
+* TODO: Imports tipografías desde Google Fonts
 */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;...');
 
 /**
-* ? options path
+* ? Estilos para el bloque de navegación (ruta / menú de opciones)
 */
 .menuoptions-customer-info {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    height: 2rem;
-    text-align: center;
-    margin-top: 1rem;
+    display: flex;                     /* Distribuye en línea los elementos */
+    justify-content: flex-start;      /* Alinea el contenido al inicio horizontal */
+    align-items: center;              /* Centra verticalmente */
+    height: 2rem;                     /* Altura del contenedor */
+    text-align: center;               /* Centrado de texto */
+    margin-top: 1rem;                 /* Espaciado superior */
 }
 
+/* Título principal del menú */
 .menuoptions-title {
-    font-family: "Poppins", Arial;
-    font-weight: 800;
-    margin: 0.5rem 0;
-    font-size: 1.5rem;
-    margin-left: 1rem;
+    font-family: "Poppins", Arial;    /* Fuente personalizada */
+    font-weight: 800;                 /* Negrita fuerte */
+    margin: 0.5rem 0;                 /* Márgenes verticales */
+    font-size: 1.5rem;                /* Tamaño del texto */
+    margin-left: 1rem;                /* Espacio a la izquierda */
 }
 
+/* Subtítulos dentro del menú */
 .menuoptions-sub-title {
     font-family: "Poppins", Arial;
     font-weight: 400;
@@ -32,25 +34,30 @@
     font-size: 1.5rem;
 }
 
+/* Estilo del select desplegable */
 .customer-options {
     padding: .1rem;
-    border-radius: 10px;
-    border-color: var(--color-sub-titles-purple);
+    border-radius: 10px;                             /* Bordes redondeados */
+    border-color: var(--color-sub-titles-purple);    /* Color del borde */
 }
 
+/* Estilo para los íconos svg */
 svg {
     margin-top: 0.5rem;
     margin: 0.5rem 0;
 }
 
+/* Clase para color púrpura */
 .purple {
     color: var(--color-sub-titles-purple);
 }
 
+/* Clase para color gris */
 .grey {
     color: var(--color-sub-titles-grey);
 }
 
+/* Línea divisoria visual entre secciones */
 .divisor-line {
     width: 100%;
     height: 2px;
@@ -60,7 +67,7 @@ svg {
 }
 
 /**
-* ? title component
+* ? Estilos para el título del componente
 */
 .container-title {
     position: relative;
@@ -68,6 +75,7 @@ svg {
     width: 100%;
 }
 
+/* Estilo centrado absoluto para el texto */
 .title-component {
     position: absolute; 
     top: 50%;
@@ -78,45 +86,51 @@ svg {
 }
 
 /**
-* ? description user
+* ? Descripción visual del usuario
 */
 .container-description-user {
-    height: 80vh;
+    height: 80vh;                       /* Altura de la vista */
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-around;     /* Distribución vertical equilibrada */
 }
 
+/* Contenedor que agrupa imagen, nombre y ubicación */
 .container-image-name-location {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
+    gap: 3rem;                          /* Espacio entre elementos */
 }
 
+/* Tamaño de fuente del nombre */
 .user-name {
     font-size: xx-large;
 }
 
+/* Estilo de la imagen de perfil */
 .user-image {
     border: 2px var(--color-sub-titles-purple) solid;
     width: 10rem;
     height: 10rem;
-    border-radius: 100%;
+    border-radius: 100%;               /* Imagen redonda */
 }
 
+/* Estilo para la ubicación */
 .user-location {
     color: var(--color-sub-titles-grey);
     font-size: x-large;
     font-weight: 400;
 }
 
+/* Contenedor de la información de contacto */
 .container-contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Cada grupo de info (email, teléfono, etc.) */
 .contact-info {
     width: 20%;
     display: flex;
@@ -124,17 +138,20 @@ svg {
     gap: 1rem;
 }
 
+/* Etiqueta del tipo de info (ej: Email:) */
 .content-span {
     font-size: x-large;
     font-weight: 500;
 }
 
+/* Valor del dato (ej: nabeel@gmail.com) */
 .content-info {
     color: var(--color-sub-titles-grey);
     font-size: x-large;
     font-weight: 400;
 }
 
+/* Contenedor del botón "Block" */
 .container-block {
     display: flex;
     justify-content: center;
