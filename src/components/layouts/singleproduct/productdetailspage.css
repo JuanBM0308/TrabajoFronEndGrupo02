@@ -1,43 +1,54 @@
-.small-img-group{
-    display: flex;
-    justify-content: space-between;
-}
-.main-img{
-width:80%;
-height: 60%;
-
+/* Grupo de imágenes pequeñas (miniaturas del producto) */
+.small-img-group {
+    display: flex; /* Alinea horizontalmente las miniaturas */
+    justify-content: space-between; /* Espacio uniforme entre ellas */
 }
 
-.small-img-col{
-    flex-basis: 24%;
-    cursor: pointer;
+/* Imagen principal del producto */
+.main-img {
+    width: 80%; /* Ancho de la imagen principal */
+    height: 60%; /* Alto de la imagen principal */
 }
 
-.single-product input{
-    width: 50px;
-    height: 40px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
+/* Cada columna que contiene una miniatura */
+.small-img-col {
+    flex-basis: 24%; /* Cada miniatura ocupa el 24% del contenedor */
+    cursor: pointer; /* Cambia el cursor a "mano" al pasar el mouse */
 }
-.single-product input:focus{
+
+/* Input de cantidad en página de producto */
+.single-product input {
+    width: 50px; /* Ancho del input */
+    height: 40px; /* Alto del input */
+    padding-left: 10px; /* Espaciado interno a la izquierda */
+    font-size: 16px; /* Tamaño de letra del número */
+    margin-right: 10px; /* Espacio a la derecha del input */
+}
+
+/* Quita el contorno al enfocar el input */
+.single-product input:focus {
     outline: none;
 }
 
-.single-product buy-btn{
-    background-color: rgb(198, 66, 66);
-    opacity: 1;
-    transition: 0.4s ease;
-}
-.single-product .buy-btn:hover{
-    background-color: black;
+/* Estilos del botón de compra (mal escrito, debería ser `.buy-btn` con punto) */
+.single-product buy-btn {
+    background-color: rgb(198, 66, 66); /* Color de fondo rojo */
+    opacity: 1; /* Completamente visible */
+    transition: 0.4s ease; /* Transición suave */
 }
 
+/* Hover del botón de compra (correctamente con clase) */
+.single-product .buy-btn:hover {
+    background-color: black; /* Al pasar el mouse, fondo negro */
+}
+
+/* Estilos generales de texto en la sección de detalles del producto */
 .product-details 
-h3,h2,h4,h6,span{
-font-weight: 900;
+h3, h2, h4, h6, span {
+    font-weight: 900; /* Letra en negrita fuerte */
 }
 
-.stock-info h6{
-    font-weight: 900;
+/* Negrita para la info de stock */
+.stock-info h6 {
+    font-weight: 900; /* También en negrita fuerte */
 }

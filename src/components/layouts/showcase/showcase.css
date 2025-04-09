@@ -1,33 +1,40 @@
-.showcase-container{
-    height: 100vh;
-    width: 100%;
-    background-image: url('');
-    background-color: rgb(225, 204, 245);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2);
+/* Contenedor principal del showcase */
+.showcase-container {
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    background-image: url(''); /* Imagen de fondo (vacía por ahora) */
+    background-color: rgb(225, 204, 245); /* Color de fondo si la imagen no se carga */
+    background-size: cover; /* La imagen de fondo cubre todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: relative; /* Posición relativa para futuros elementos posicionados */
+    display: flex; /* Usa Flexbox para el contenido interno */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    box-shadow: 0 20px 10px rgba(0, 0, 0, 0.2); /* Sombra en la parte inferior del contenedor */
+}
 
+/* Estilos para la sección de inicio con ID "home" */
+#home {
+    background-image: url('../../../assets/imgs/header1.jpg'); /* Imagen de fondo para la sección */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    background-size: cover; /* Cubre el área completa sin distorsión */
+    display: flex; /* Flexbox para estructurar contenido */
+    flex-direction: column; /* Apila los hijos verticalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: flex-start; /* Alinea el contenido al inicio horizontalmente (izquierda) */
 }
-#home{
-    background-image: url('../../../assets/imgs/header1.jpg');
-    width: 100%;
-    height: 100vh;
-    background-size:cover;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
+
+/* Estilo para los elementos span dentro del home */
+#home span {
+    color: var(--color-primario2); /* Usa la variable CSS para el color primario 2 */
 }
-#home span{
-color:var(--color-primario2);
-}
-#home h5,h1,p{
-font-weight:900;
-color: #fff;
+
+/* Estilos compartidos para títulos y párrafos en el home */
+#home h5,
+#home h1,
+#home p {
+    font-weight: 900; /* Texto en negrita extra */
+    color: #fff; /* Color blanco para contrastar con la imagen de fondo */
 }

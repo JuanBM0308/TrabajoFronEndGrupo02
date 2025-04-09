@@ -1,13 +1,12 @@
-.productlist-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-.listing-container{
-padding-top: 4rem;
-display: flex;
-justify-content: space-between;
+/* Contenedor principal de la lista de productos */
+.productlist-container {
+    margin-top: 5%;   /* Margen superior del 5% del alto del contenedor padre */
+    margin-bottom: 5%; /* Margen inferior del 5% del alto del contenedor padre */
 }
 
-h2{
-
+/* Contenedor para la sección de listado */
+.listing-container {
+    padding-top: 4rem; /* Espacio interno superior de 4rem */
+    display: flex; /* Usa Flexbox para disposición horizontal */
+    justify-content: space-between; /* Espacia uniformemente los elementos con espacio entre ellos */
 }

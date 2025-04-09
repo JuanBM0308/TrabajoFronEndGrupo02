@@ -1,133 +1,145 @@
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-    body{
-        background-color: #eeeeee;
-        font-family: 'Open Sans',serif;
-        font-size: 14px;
-        
+/* Importa la fuente 'Open Sans' desde Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
-    }
-
-    .mt-100{
-        margin-top: 150px;
-    }
-
-    .filter-group {
-    border-bottom: 1px solid #e4e4e4;
+/* Estilos generales del body */
+body {
+    background-color: #eeeeee; /* Color de fondo gris claro */
+    font-family: 'Open Sans', serif; /* Aplica la fuente 'Open Sans' */
+    font-size: 14px; /* Tamaño de fuente base */
 }
 
-    .card {
-    position: relative;
-    display: -webkit-box;
+/* Clase para agregar un margen superior de 150px */
+.mt-100 {
+    margin-top: 150px;
+}
+
+/* Grupo de filtros con borde inferior */
+.filter-group {
+    border-bottom: 1px solid #e4e4e4; /* Línea gris claro */
+}
+
+/* Tarjeta reutilizable con estilos modernos */
+.card {
+    position: relative; /* Posicionamiento relativo para contenido interno */
+    display: -webkit-box; /* Compatibilidad con navegadores antiguos */
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
+    display: flex; /* Usa flexbox */
+    -webkit-box-orient: vertical; /* Orientación vertical (legacy) */
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.37rem;
+    flex-direction: column; /* Coloca elementos hijos uno debajo del otro */
+    min-width: 0; /* Previene desbordes */
+    word-wrap: break-word; /* Rompe texto largo */
+    background-color: #fff; /* Fondo blanco */
+    background-clip: border-box; /* Clipping de fondo */
+    border: 1px solid rgba(0, 0, 0, 0.1); /* Borde gris tenue */
+    border-radius: 0.37rem; /* Bordes redondeados */
 }
 
+/* Encabezado de la tarjeta */
 .card-header {
-    padding: 0.75rem 1.25rem;
+    padding: 0.75rem 1.25rem; /* Relleno interno */
     margin-bottom: 0;
-    background-color: #fff;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Fondo blanco */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Línea separadora gris */
 }
 
+/* Elimina la línea inferior del header en filtros */
 .filter-group .card-header {
     border-bottom: 0;
 }
 
+/* Estilo para íconos de control en encabezados */
 .icon-control {
-    margin-top: 6px;
-    float: right;
-    font-size: 80%;
+    margin-top: 6px; /* Separación superior */
+    float: right; /* Alinea a la derecha */
+    font-size: 80%; /* Tamaño reducido */
 }
 
+/* Lista sin viñetas */
 .list-menu {
     list-style: none;
     margin: 0;
     padding-left: 0;
 }
 
+/* Enlaces del menú */
 .list-menu a {
-    color: #343a40;
+    color: #343a40; /* Gris oscuro */
 }
 
+/* Estilo general para todos los enlaces */
 a {
-   
-    text-decoration: none !important;
-    background-color: transparent;
+    text-decoration: none !important; /* Quita subrayado */
+    background-color: transparent; /* Sin fondo */
 }
 
-
+/* Contenedor personalizado para botones tipo checkbox */
 .checkbox-btn {
     position: relative;
 }
 
+/* Oculta el input nativo del checkbox */
 .checkbox-btn input {
     position: absolute;
-    z-index: -1;
-    opacity: 0;
+    z-index: -1; /* Lo manda al fondo */
+    opacity: 0; /* Lo hace invisible */
 }
 
-
+/* Estilo para el botón cuando el checkbox está activo */
 .checkbox-btn input:checked ~ .btn {
-    border-color: #3167eb;
-    background-color: #3167eb;
-    color: #fff;
+    border-color: #3167eb; /* Azul fuerte */
+    background-color: #3167eb; /* Fondo azul */
+    color: #fff; /* Texto blanco */
 }
 
+/* Botón claro (tipo filtro) */
 .btn-light {
     display: inline-block;
-    font-weight: 600;
+    font-weight: 600; /* Texto más grueso */
     color: #343a40;
     text-align: center;
     vertical-align: middle;
-    -webkit-user-select: none;
+    -webkit-user-select: none; /* Evita selección del texto */
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    background-color: #eee;
+    background-color: #eee; /* Fondo gris claro */
     border: 1px solid #eee;
-    padding: 0.45rem 0.85rem;
-        font-size: 10px;
+    padding: 0.45rem 0.85rem; /* Relleno interno */
+    font-size: 10px;
     line-height: 1.5;
-    border-radius: 0.37rem;
-    
-   }
-
-   .btn-light:hover {
-    background-color: #fff;
-    border-color: #989898;
+    border-radius: 0.37rem; /* Bordes redondeados */
 }
 
+/* Hover del botón claro */
+.btn-light:hover {
+    background-color: #fff; /* Fondo blanco al pasar el mouse */
+    border-color: #989898; /* Borde gris medio */
+}
 
+/* Botón personalizado mediano */
 .btn-medium {
     font-size: 12px;
     padding: 10px 22px;
     display: inline-block;
     margin-right: 20px;
-    letter-spacing: 2px;
-
-    border: 1px solid #157af6;
-    width: 100%;
+    letter-spacing: 2px; /* Espaciado entre letras */
+    border: 1px solid #157af6; /* Azul brillante */
+    width: 100%; /* Ocupa todo el ancho */
 }
 
+/* Hover para botón destacado */
 .highlight-button:hover {
-    background-color: #157af6;
-    border: 2px solid #157af6;
-    color: #fff;
+    background-color: #157af6; /* Fondo azul brillante */
+    border: 2px solid #157af6; /* Borde azul más grueso */
+    color: #fff; /* Texto blanco */
 }
 
+/* Control personalizado para formularios (checkbox o radio) */
 .custom-control {
     position: relative;
     display: block;
-    min-height: 1.5rem;
-    padding-left: 1.5rem;
+    min-height: 1.5rem; /* Altura mínima */
+    padding-left: 1.5rem; /* Espacio para el input */
 }

@@ -1,51 +1,59 @@
-#new .one img{
-    width: 100%;
-    width: 100%;
-    background-position:center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-#new .one{
-position: relative;
+/* Estilos para la imagen dentro del contenedor .one */
+#new .one img {
+    width: 100%; /* La imagen ocupa todo el ancho del contenedor */
+    background-position: center; /* Centra la imagen si es usada como fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-size: cover; /* Escala la imagen para cubrir completamente el contenedor */
 }
 
-#new .one .details{
-    position: absolute;
+/* Posiciona .one de manera relativa para posicionar los detalles sobre él */
+#new .one {
+    position: relative;
+}
+
+/* Estilos para el contenedor .details (texto y botón sobre la imagen) */
+#new .one .details {
+    position: absolute; /* Posición absoluta para colocarlo sobre la imagen */
     top: 0;
     left: 0;
-    color: rgb(221, 202, 202);
+    color: rgb(221, 202, 202); /* Color claro para contraste inicial */
     font-weight: bold;
-    transition: 0.4s ease;
-    opacity: 0.6;
-    background-color: black;
+    transition: 0.4s ease; /* Transición suave en hover */
+    opacity: 0.6; /* Un poco transparente inicialmente */
+    background-color: black; /* Fondo negro semitransparente */
     width: 100%;
     height: 100%;
 }
-#new .one .details:hover{
-    background-color: rgba(206, 211, 215, 0.029);
-    color: black;
-}
-#new .one:nth-child(1) .details{
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: flex-start;
-text-align: start;
+
+/* Cambios cuando el mouse pasa sobre .details */
+#new .one .details:hover {
+    background-color: rgba(206, 211, 215, 0.029); /* Fondo más transparente al pasar el mouse */
+    color: black; /* Cambia el texto a negro */
 }
 
-#new .one:nth-child(2) .details{
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: center;
-text-align: center;
-
+/* Estilos específicos para la primera tarjeta */
+#new .one:nth-child(1) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea contenido a la izquierda */
+    text-align: start;
 }
-#new .one:nth-child(3) .details{
-display: flex;
-justify-content: center;
-flex-direction: column;
-align-items: flex-end;
-text-align: end;
+
+/* Estilos para la segunda tarjeta */
+#new .one:nth-child(2) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; /* Alinea contenido al centro */
+    text-align: center;
+}
+
+/* Estilos para la tercera tarjeta */
+#new .one:nth-child(3) .details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea contenido a la derecha */
+    text-align: end;
 }

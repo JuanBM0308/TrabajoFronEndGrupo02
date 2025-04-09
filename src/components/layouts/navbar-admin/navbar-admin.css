@@ -1,121 +1,133 @@
 :root {
-  --color-sub-titles-purple: #6a0dad; /* Define el color púrpura aquí */
+  --color-sub-titles-purple: #6a0dad; /* Define el color púrpura para subtítulos */
 }
 
 .navbar {
-  font-size: 17px;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  font-size: 17px; /* Tamaño de fuente para la navbar */
+  padding-top: 2rem; /* Espaciado superior */
+  padding-bottom: 2rem; /* Espaciado inferior */
   top: 0;
   left: 0;
-  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1);
+  box-shadow: 0 5px 10px rgb(0, 0, 0, 0.1); /* Sombra sutil en la parte inferior */
 }
+
 .material-symbols-outlined {
-  padding: 0 20px;
-  color: black;
-  transition: 0.4s ease;
+  padding: 0 20px; /* Espaciado lateral de los íconos */
+  color: black; /* Color inicial de los íconos */
+  transition: 0.4s ease; /* Transición suave para hover */
 }
 
 .material-symbols-outlined:hover {
-  color: var(--color-primario2);
+  color: var(--color-primario2); /* Cambia de color al pasar el cursor */
 }
+
 .navbar h2 {
-  margin-left: 20px;
+  margin-left: 20px; /* Separación izquierda para el título */
 }
+
 .navbar li {
-  list-style: none;
-  font-size: 1.5rem;
+  list-style: none; /* Quita los bullets de la lista */
+  font-size: 1.5rem; /* Tamaño grande para ítems de navegación */
 }
+
 .navbar span {
-  padding: 0 0.7px;
-  transition: 0.4s ease;
-  font-weight: 500;
-  cursor: pointer;
-  margin-left: 5px;
+  padding: 0 0.7px; /* Espaciado horizontal */
+  transition: 0.4s ease; /* Transición suave para efectos */
+  font-weight: 500; /* Peso medio del texto */
+  cursor: pointer; /* Cambia el cursor a puntero */
+  margin-left: 5px; /* Separación del ícono o texto */
 }
+
 @media only screen and (max-width: 990px) {
   .nav-buttons {
-    margin: 10px;
+    margin: 10px; /* Margen para los botones en móviles */
   }
 
   .nav-buttons ul {
-    margin: 1rem;
-    justify-content: flex-start;
-    text-align: left;
+    margin: 1rem; /* Margen superior e inferior */
+    justify-content: flex-start; /* Alineación a la izquierda */
+    text-align: left; /* Texto alineado a la izquierda */
   }
 
   .navbar form {
-    width: 10px;
+    width: 10px; /* Ancho reducido para formulario en navbar */
   }
+
   .navbar .no-link-style {
-    text-decoration: none;
-    color: inherit;
+    text-decoration: none; /* Quita subrayado */
+    color: inherit; /* Hereda el color */
   }
 
   .nav-buttons ul .fas {
-    margin: 2px 5px 10px 20px;
+    margin: 2px 5px 10px 20px; /* Margen específico para íconos FontAwesome */
   }
 }
+
 .navbar-collapse {
-  z-index: 99;
+  z-index: 99; /* Asegura que se muestre por encima de otros elementos */
 }
+
 .navbar-collapse ul {
-  margin-left: 10px;
-  display: flex;
-  flex-wrap: nowrap;
+  margin-left: 10px; /* Separación izquierda de la lista */
+  display: flex; /* Flexbox para organizar ítems */
+  flex-wrap: nowrap; /* No permite el salto de línea */
 }
+
 .navbar-collapse li {
-  padding-right: 10px;
+  padding-right: 10px; /* Separación entre ítems */
 }
+
 .nav-link {
-  font-weight: 800;
+  font-weight: 800; /* Negrita para enlaces de navegación */
 }
+
 .btn {
-  border-color: var(--color-primario2);
+  border-color: var(--color-primario2); /* Color personalizado para borde de botón */
 }
 
 /** 
 * ? Navbar-admin extra css
 */
+
 .container-divisor {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+  display: flex; /* Contenedor en línea */
+  align-items: center; /* Centra verticalmente */
+  gap: 2rem; /* Espacio entre los elementos */
 }
 
 .container-title-admin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex; /* Flexbox para alinear verticalmente */
+  flex-direction: column; /* Dirección en columna */
+  align-items: center; /* Centrado horizontal */
 }
 
 .sub-title {
-  color: var(--color-sub-titles-purple) !important; /* Asegúrate de que no sea sobrescrito */
+  color: var(--color-sub-titles-purple) !important; /* Color púrpura para subtítulo (forzado con !important) */
 }
 
 .icon-change-color:hover {
-  fill: var(--color-primario2);
+  fill: var(--color-primario2); /* Cambia el color de relleno en hover */
 }
 
 .select-line-button {
-  width: 100%;
-  height: 0.2rem;
-  border-radius: 10px;
-  background-color: #ba2afde8;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  width: 100%; /* Ancho completo */
+  height: 0.2rem; /* Altura pequeña (línea delgada) */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #ba2afde8; /* Color del indicador de selección */
+  opacity: 0; /* Oculto por defecto */
+  transition: opacity 0.3s ease-in-out; /* Transición suave al mostrarse */
 }
 
 .select-line-button.active {
-  opacity: 1;
+  opacity: 1; /* Se hace visible cuando está activo */
 }
 
 .user-list-button {
-  background-color: #7800b02f !important;
-  border-radius: 10px;
-  margin-top: .2em;
+  background-color: #7800b02f !important; /* Color de fondo con transparencia */
+  border-radius: 10px; /* Esquinas redondeadas */
+  margin-top: .2em; /* Margen superior */
 }
 
 .text-customer-list {
-  color: var(--color-primario2);
+  color: var(--color-primario2); /* Color personalizado del texto */
 }

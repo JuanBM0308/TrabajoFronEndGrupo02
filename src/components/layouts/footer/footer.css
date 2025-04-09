@@ -1,30 +1,36 @@
-.footer-container{
+/* Contenedor principal del footer con fondo oscuro */
+.footer-container {
     background-color: rgb(36, 36, 36);
 }
 
-.footer-container h5{
-    color: rgb(227, 227, 227);
-    font-weight: 500;
-    letter-spacing: 2px;
-    font-size: 1.5rem;
-
+/* Estilos para los títulos dentro del footer */
+.footer-container h5 {
+    color: rgb(227, 227, 227); /* Color claro para contraste */
+    font-weight: 500;          /* Peso de fuente medio */
+    letter-spacing: 2px;       /* Espaciado entre letras */
+    font-size: 1.5rem;         /* Tamaño de fuente */
 }
-.footer-one li{
+
+/* Espaciado entre elementos de lista en el footer */
+.footer-one li {
     padding-bottom: 4px;
 }
 
-.footer-one li a{
-    font-size: 0.8rem;
-    font-weight: 900;
-    color: rgb(237, 231, 231);
-    text-decoration: none;
+/* Estilos para los enlaces dentro de las listas del footer */
+.footer-one li a {
+    font-size: 0.8rem;         /* Tamaño de fuente más pequeño */
+    font-weight: 900;          /* Negrita */
+    color: rgb(237, 231, 231); /* Color claro */
+    text-decoration: none;     /* Sin subrayado */
 }
 
-.footer-one li a:hover{
-    color: rgb(228, 149, 228);
+/* Efecto hover en los enlaces del footer */
+.footer-one li a:hover {
+    color: rgb(228, 149, 228); /* Color rosado/lila al pasar el mouse */
 }
 
-.footer-container .fa-copyright a{
+/* Estilo para los íconos de redes sociales en el pie de página */
+.footer-container .fa-copyright a {
     color: black;
     height: 40px;
     width: 40px;
@@ -32,20 +38,23 @@
     display: inline-block;
     text-align: center;
     line-height: 38px;
-    border-radius: 50%;
-    transition:0.3s ease;
-    margin: 0 5px;
+    border-radius: 50%;         /* Forma circular */
+    transition: 0.3s ease;      /* Transición suave */
+    margin: 0 5px;              /* Separación entre íconos */
 }
 
-.footer-container .fa-copyright a:hover{
+/* Hover en los íconos de redes: cambia fondo y color del icono */
+.footer-container .fa-copyright a:hover {
     color: #fff;
-    background-color: rgb(133, 41, 41);
+    background-color: rgb(133, 41, 41); /* Color vino oscuro */
 }
-.footer-container p{
+
+/* Estilo para todos los párrafos dentro del footer */
+.footer-container p {
     color: #fff;
 }
 
-.footer-container .fa-copyright img{
+/* Estilo para la imagen de métodos de pago (u otra imagen similar) */
+.footer-container .fa-copyright img {
     width: 50%;
 }
-
