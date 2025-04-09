@@ -1,88 +1,103 @@
+/* Importa la fuente Poppins desde Google Fonts con estilo itálico y peso 100 */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
 
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;  
-  font-family: "Poppins";
-  font-weight: 400;
-}
-:root{
-  --color-primario:#a9a9da;
-  --color-primario2: #6728a1;
-  --color-sub-titles-purple: #7607C0;
-  --color-sub-titles-grey: #8B8E99;
+/* Estilos generales para todos los elementos */
+* {
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina padding por defecto */
+  box-sizing: border-box; /* Incluye padding y borde dentro del tamaño total */
+  font-family: "Poppins"; /* Aplica fuente Poppins a todos los elementos */
+  font-weight: 400; /* Aplica peso de fuente 400 */
 }
 
-body{
-font-family: "Poppins";
-font-weight: 900;
-
-}
-h1{
-    font-size: 2.5rem;
-    font-weight: 700;
-}
-h2{
-    font-size: 1.8rem;
-    font-weight: 600;
-}
-h3{
-    font-size: 1.6rem;
-    font-weight: 300;
+/* Variables globales CSS (colores personalizados) */
+:root {
+  --color-primario: #a9a9da; /* Color principal */
+  --color-primario2: #6728a1; /* Segundo color principal */
+  --color-sub-titles-purple: #7607C0; /* Color para subtítulos púrpura */
+  --color-sub-titles-grey: #8B8E99; /* Color para subtítulos gris */
 }
 
-@media only screen and (max-width:990px){
-.nav-buttons{
-    margin: 10px;
+/* Estilos para el body */
+body {
+  font-family: "Poppins"; /* Fuente Poppins */
+  font-weight: 900; /* Peso de fuente fuerte para textos generales */
 }
+
+/* Estilos para títulos */
+h1 {
+  font-size: 2.5rem; /* Tamaño grande para título principal */
+  font-weight: 700; /* Peso fuerte */
 }
-.container{
+h2 {
+  font-size: 1.8rem; /* Tamaño intermedio para subtítulo */
+  font-weight: 600; /* Peso medio */
+}
+h3 {
+  font-size: 1.6rem; /* Tamaño más pequeño para subtítulos */
+  font-weight: 300; /* Peso más liviano */
+}
+
+/* Media query para pantallas pequeñas */
+@media only screen and (max-width: 990px) {
+  .nav-buttons {
+    margin: 10px; /* Margen para botones de navegación */
+  }
+}
+
+/* Contenedor principal con ancho máximo del 90% */
+.container {
   width: 90%;
-  margin: auto;
+  margin: auto; /* Centrado horizontal */
 }
 
-
-.flex{
-  display: flex;
-} 
-.justify-between{
-  justify-content: space-between;
-} 
-.justify-center{
-  justify-content: center;
+/* Utilidades flexbox */
+.flex {
+  display: flex; /* Aplica display flex */
 }
-.aling-center{
-  align-items:center
+.justify-between {
+  justify-content: space-between; /* Espacio entre elementos */
 }
-
-button{
-    font-size: 1rem;
-    font-weight: 300;
-    outline: none;
-    border: none;
-    color: rgb(255, 255, 255);
-    background-color:var(--color-primario);
-    padding: 13px 30px;
-    cursor: pointer;
-    transition: 0.5s ease;
-    border-radius: 6%;
-    font-weight: 900;
+.justify-center {
+  justify-content: center; /* Centra horizontalmente */
 }
-button:hover{
-color: rgb(247, 247, 247);
-background:var(--color-primario2);
-}
-.logo{
-    width: 40px;
-    height: 40px;
+.aling-center {
+  align-items: center; /* Centra verticalmente (hay un typo en "align") */
 }
 
-.d-flex .btn{
-  border-color:var(--color-primario2);
+/* Estilos para botones */
+button {
+  font-size: 1rem; /* Tamaño de fuente base */
+  font-weight: 300; /* Peso ligero */
+  outline: none; /* Elimina borde de enfoque */
+  border: none; /* Elimina borde */
+  color: rgb(255, 255, 255); /* Texto blanco */
+  background-color: var(--color-primario); /* Fondo con variable personalizada */
+  padding: 13px 30px; /* Espaciado interno */
+  cursor: pointer; /* Cambia cursor a mano */
+  transition: 0.5s ease; /* Transición suave */
+  border-radius: 6%; /* Bordes redondeados */
+  font-weight: 900; /* Peso fuerte para visibilidad */
 }
 
-.d-flex btn:hover{
-  background-color: var(--color-primario2);
+/* Efecto hover para botones */
+button:hover {
+  color: rgb(247, 247, 247); /* Texto ligeramente gris */
+  background: var(--color-primario2); /* Fondo cambia al segundo color */
+}
+
+/* Tamaño del logo */
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+/* Estilo para botones dentro de un contenedor con clase d-flex */
+.d-flex .btn {
+  border-color: var(--color-primario2); /* Color de borde personalizado */
+}
+
+/* Hover para botones dentro de d-flex (hay un pequeño error: falta el punto en .btn) */
+.d-flex btn:hover {
+  background-color: var(--color-primario2); /* Cambia el fondo en hover */
 }
