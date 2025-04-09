@@ -1,42 +1,45 @@
-.carrusel-class h1{
-color: black;
+/* Estilo para encabezados h1 dentro del carrusel */
+.carrusel-class h1 {
+  color: black;
 }
 
-.carousel-item{
-    height: 60vh;
-    padding: 10px;
-   
+/* Estilo general para cada item del carrusel */
+.carousel-item {
+  height: 60vh;       /* Altura del slide al 60% del alto de la ventana */
+  padding: 10px;      /* Espaciado interno */
 }
 
+/* Estilo para las tarjetas de testimonios */
 .tarjeta {
-    background-color: rgba(0, 0, 0, 0.241);
-    border-radius: 20px ;
-    height: 100%;
-    
+  background-color: rgba(0, 0, 0, 0.241); /* Fondo oscuro con transparencia */
+  border-radius: 20px;                   /* Bordes redondeados */
+  height: 100%;                          /* Ocupa todo el alto del contenedor */
 }
 
-.tarjeta img{
-    width: 100px;
-    border-radius: 50px;
-    margin: 30px 30px;
-    height: 100px;
+/* Estilo para las imágenes dentro de la tarjeta */
+.tarjeta img {
+  width: 100px;            /* Ancho fijo */
+  border-radius: 50px;     /* Forma circular */
+  margin: 30px 30px;       /* Margen exterior */
+  height: 100px;           /* Alto fijo */
 }
 
-.tag{
-    height: 60vh;
-    border-radius: 20px;
-   
+/* Clase que define la altura y bordes redondeados del contenedor */
+.tag {
+  height: 60vh;            /* Altura igual a la del item */
+  border-radius: 20px;     /* Bordes redondeados */
 }
 
-
+/* Personalización de los íconos de navegación del carrusel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  filter: brightness(0) saturate(100%) invert(12%) sepia(98%) saturate(7497%) hue-rotate(1deg) brightness(108%) contrast(128%);
+  filter: brightness(0) saturate(100%) invert(12%) sepia(98%) 
+          saturate(7497%) hue-rotate(1deg) brightness(108%) contrast(128%);
+  /* Filtro CSS para cambiar color del ícono */
 }
 
+/* Evita que el fondo cambie al pasar el mouse sobre los controles */
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background-color: transparent !important; /* Evita cambios de fondo */
-  
-
+  background-color: transparent !important;
 }

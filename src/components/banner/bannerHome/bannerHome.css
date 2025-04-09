@@ -1,12 +1,13 @@
-.parrafo{
-    width: 90%;
-    font-size: 17px;
-    letter-spacing: 2px;
+.parrafo {
+    width: 90%; /* Define un ancho máximo del párrafo para mayor legibilidad */
+    font-size: 17px; /* Tamaño de fuente adecuado para lectura */
+    letter-spacing: 2px; /* Espaciado entre letras para mejorar el estilo visual */
 }
 
-h2{
-    letter-spacing: 3px;
+h2 {
+    letter-spacing: 3px; /* Aumenta el espaciado de letras en títulos para destacar */
 }
-.parrafo b{
-font-weight: 700;
+
+.parrafo b {
+    font-weight: 700; /* Estiliza el texto en negrita dentro del párrafo para resaltar ideas clave */
 }

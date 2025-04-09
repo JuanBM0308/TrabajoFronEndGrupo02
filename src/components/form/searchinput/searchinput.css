@@ -1,32 +1,36 @@
-.search-container{
-    display: flex;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 5px;
-    margin-top: 20px;
-    box-shadow: 4px 4px 15px #858585;
-}
-.search-input{
-    flex: 1;
-    outline: none;
-    border: none;
-    font-size: 1.5rem;
-    padding-left: 10px;
-
+/* Contenedor principal del buscador */
+.search-container {
+    display: flex;                /* Elementos en línea flexible */
+    padding: 1rem;                /* Espaciado interno */
+    background-color: #fff;       /* Fondo blanco */
+    border-radius: 5px;           /* Bordes redondeados */
+    margin-top: 20px;             /* Separación superior */
+    box-shadow: 4px 4px 15px #858585; /* Sombra para efecto elevado */
 }
 
-.search-button{
-padding: 0.5rem 1rem;
-border: none;
-background-color: var(--color-primario);
-color: #fff;
-border-radius: 5px;
-font-weight: bold;
-transition: .3s ease-in-out;
-cursor: pointer;
+/* Estilo del input de búsqueda */
+.search-input {
+    flex: 1;                      /* Ocupa todo el espacio restante */
+    outline: none;               /* Elimina el borde de enfoque por defecto */
+    border: none;                /* Sin borde */
+    font-size: 1.5rem;           /* Tamaño grande de texto */
+    padding-left: 10px;          /* Espaciado a la izquierda */
 }
 
-.search-button:hover{
-    background-color:var(--color-primario2);
-    color: #fff;
+/* Botón de búsqueda */
+.search-button {
+    padding: 0.5rem 1rem;             /* Espaciado interno vertical y horizontal */
+    border: none;                     /* Sin borde */
+    background-color: var(--color-primario); /* Color de fondo con variable CSS */
+    color: #fff;                      /* Color del texto blanco */
+    border-radius: 5px;               /* Bordes redondeados */
+    font-weight: bold;               /* Texto en negrita */
+    transition: .3s ease-in-out;     /* Transición suave en hover */
+    cursor: pointer;                 /* Cambia cursor al pasar sobre el botón */
+}
+
+/* Efecto hover del botón */
+.search-button:hover {
+    background-color: var(--color-primario2); /* Cambio de fondo en hover */
+    color: #fff;                              /* Asegura que el texto siga blanco */
 }

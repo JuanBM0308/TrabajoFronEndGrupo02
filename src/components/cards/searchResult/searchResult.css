@@ -1,42 +1,53 @@
-hr{
-    width: 30px;
-    height: 3px !important;
-    opacity:1 !important;
-}
-.star{
-    padding: 10px 0;
+/* Estilo para la etiqueta <hr> */
+hr {
+    width: 30px; /* Ancho de la línea */
+    height: 3px !important; /* Altura con !important para sobreescribir otros estilos */
+    opacity: 1 !important; /* Opacidad total (completamente visible) */
 }
 
+/* Contenedor de estrellas de puntuación */
+.star {
+    padding: 10px 0; /* Espaciado arriba y abajo */
+}
+
+/* Estilo para los íconos de estrellas */
 .star i {
-color: goldenrod;
+    color: goldenrod; /* Color dorado para representar calificación */
 }
 
-.product{
-    cursor: pointer;
-    margin-bottom: 2rem;
+/* Contenedor de cada producto */
+.product {
+    cursor: pointer; /* Cursor cambia a puntero al pasar el mouse */
+    margin-bottom: 2rem; /* Margen inferior para separación entre productos */
 }
 
-.product img{
-    transition: 0.4s all;
-    width: 100%;
-}
-.p-name,.p-price{
- font-weight: 800;   
-}
-.product:hover img{
-    opacity: 0.6;
+/* Imagen del producto */
+.product img {
+    transition: 0.4s all; /* Transición suave para todos los cambios */
+    width: 100%; /* Imagen ocupa todo el ancho del contenedor */
 }
 
-.product .buy-btn{
-    background-color: var(--color-primario2);
-    transform: translateY(50px);
-    opacity: 0;
-    transition: 0.3s;
-
+/* Estilo del nombre y precio del producto */
+.p-name, .p-price {
+    font-weight: 800; /* Fuente en negrita */
 }
 
-.product:hover .buy-btn{
-transform: translateY(0);
-opacity: 1;
-color: white;
+/* Efecto al pasar el mouse sobre el producto */
+.product:hover img {
+    opacity: 0.6; /* Imagen se vuelve más transparente */
+}
+
+/* Estilo del botón "Comprar Ahora" dentro del producto */
+.product .buy-btn {
+    background-color: var(--color-primario2); /* Color definido como primario 2 en variables */
+    transform: translateY(50px); /* Inicialmente desplazado hacia abajo */
+    opacity: 0; /* Oculto al principio */
+    transition: 0.3s; /* Transición suave */
+}
+
+/* Cuando el usuario pasa el mouse sobre el producto */
+.product:hover .buy-btn {
+    transform: translateY(0); /* Se desplaza hacia su lugar original */
+    opacity: 1; /* Se vuelve visible */
+    color: white; /* Texto blanco */
 }

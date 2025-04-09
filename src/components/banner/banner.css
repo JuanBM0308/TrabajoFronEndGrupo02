@@ -1,28 +1,37 @@
-#banner{
+/* Estilo para la sección del banner */
+#banner {
     background-image: url(https://images.pexels.com/photos/4069535/pexels-photo-4069535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
-    width: 100%;
-    height: 60vh;
-    background-size:cover;
-    background-position-x:center;
-    background-position-y:10px;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    
+    /* Imagen de fondo que se usará para el banner */
+
+    width: 100%;                      /* Toma todo el ancho disponible */
+    height: 60vh;                     /* Altura del 60% de la altura del viewport */
+
+    background-size: cover;           /* La imagen se escala para cubrir completamente el área */
+    background-position-x: center;    /* Centra horizontalmente la imagen */
+    background-position-y: 10px;      /* Desplaza la imagen 10px hacia abajo verticalmente */
+    background-repeat: no-repeat;     /* Evita que la imagen se repita */
+    background-attachment: fixed;     /* Hace que el fondo quede fijo al hacer scroll */
+
+    display: flex;                    /* Usa Flexbox para alinear el contenido */
+    flex-direction: column;          /* Alinea los hijos en columna */
+    justify-content: center;         /* Centra verticalmente el contenido dentro del banner */
+    align-items: flex-start;         /* Alinea el contenido al inicio horizontalmente (izquierda) */
 }
 
-#banner h1{
-font-weight: bold;
-color: white;
+/* Estilo para el título dentro del banner */
+#banner h1 {
+    font-weight: bold;               /* Texto en negrita */
+    color: white;                    /* Color blanco */
 }
-#banner h4{
-    font-weight: bold;
-    color:white;
+
+/* Estilo para el subtítulo o texto secundario */
+#banner h4 {
+    font-weight: bold;               /* Texto en negrita */
+    color: white;                    /* Color blanco */
 }
-#banner button:hover{
-    background-color:var(--color-primario2);
-    color: rgb(255, 255, 255);
+
+/* Estilo hover para el botón dentro del banner */
+#banner button:hover {
+    background-color: var(--color-primario2);  /* Cambia el color de fondo al pasar el cursor */
+    color: rgb(255, 255, 255);                 /* Asegura que el texto sea blanco */
 }

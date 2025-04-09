@@ -1,48 +1,55 @@
+/* Estilos para la clase .product-info dentro del contenedor .cart */
+.cart .product-info {
+    display: flex; /* Alinea los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si no hay espacio */
+}
 
-.cart .product-info{
-    display: flex;
-    flex-wrap: wrap;
-    
-    
+/* Espaciado interno para las celdas de la tabla dentro del carrito */
+.cart td {
+    padding: 10px 20px;
 }
-.cart td{
-padding: 10px 20px; 
-   
-}
-a{
-font-weight: 800;
 
+/* Estilo global para todos los enlaces */
+a {
+    font-weight: 800; /* Hace que el texto del enlace sea más grueso */
 }
-.cart td img{
+
+/* Estilos para las imágenes dentro de las celdas de la tabla del carrito */
+.cart td img {
     width: 80px;
     height: 80px;
-    margin-right: 10px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
 }
 
-.cart td input{
+/* Estilos para los inputs de cantidad dentro del carrito */
+.cart td input {
     width: 40px;
     height: 30px;
-    padding: 5px;
-}
-.cart td a{
-    color: var(--color-primario2);
+    padding: 5px; /* Espaciado interno del input */
 }
 
-.cart .remove-btn{
+/* Estilos para los enlaces dentro del carrito */
+.cart td a {
+    color: var(--color-primario2); /* Usa la variable de color primario2 */
+}
+
+/* Enlace para eliminar un producto */
+.cart .remove-btn {
     color: var(--color-primario2);
-    text-decoration: none;
+    text-decoration: none; /* Quita el subrayado */
     font-size: 14px;
 }
 
-.cart .edit-btn{
+/* Enlace para editar la cantidad del producto */
+.cart .edit-btn {
     color: var(--color-primario2);
     text-decoration: none;
     font-size: 15px;
-    padding-left: 8px;
+    padding-left: 8px; /* Añade espacio antes del texto */
 }
 
-.cart .product-info p{
+/* Estilos del párrafo dentro de la info del producto */
+.cart .product-info p {
     margin: 3px;
-    color: black;
+    color: black; /* Asegura que el texto sea legible sobre fondos claros */
 }
-

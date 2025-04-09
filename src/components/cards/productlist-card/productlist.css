@@ -1,42 +1,54 @@
-hr{
-    width: 30px;
-    height: 3px !important;
-    opacity:1 !important;
-}
-.star{
-    padding: 10px 0;
+/* Estilos para la etiqueta <hr> */
+hr {
+    width: 30px;                      /* Define un ancho fijo */
+    height: 3px !important;           /* Define una altura de 3px y fuerza con !important */
+    opacity: 1 !important;            /* Asegura que la línea sea completamente opaca */
 }
 
+/* Estilo del contenedor de estrellas */
+.star {
+    padding: 10px 0;                  /* Espaciado arriba y abajo */
+}
+
+/* Estilo para cada ícono de estrella */
 .star i {
-color: goldenrod;
+    color: goldenrod;                 /* Color dorado para las estrellas */
 }
 
-.product{
-    cursor: pointer;
-    margin-bottom: 2rem;
+/* Contenedor general del producto */
+.product {
+    cursor: pointer;                 /* Cambia el cursor al pasar por encima */
+    margin-bottom: 2rem;            /* Espacio inferior entre productos */
 }
 
-.product img{
-    transition: 0.4s all;
-    width: 100%;
-}
-.p-name,.p-price{
- font-weight: 800;   
-}
-.product:hover img{
-    opacity: 0.6;
+/* Imagen del producto */
+.product img {
+    transition: 0.4s all;           /* Transición suave en todas las propiedades durante 0.4s */
+    width: 100%;                    /* Toma el ancho completo del contenedor */
 }
 
-.product .buy-btn{
-    background-color: var(--color-primario2);
-    transform: translateY(50px);
-    opacity: 0;
-    transition: 0.3s;
-
+/* Estilo para el nombre y precio del producto */
+.p-name,
+.p-price {
+    font-weight: 800;               /* Texto en negrita */
 }
 
-.product:hover .buy-btn{
-transform: translateY(0);
-opacity: 1;
-color: white;
+/* Efecto hover sobre la imagen del producto */
+.product:hover img {
+    opacity: 0.6;                   /* Imagen más transparente al pasar el mouse */
+}
+
+/* Estilo por defecto del botón "Comprar Ahora" */
+.product .buy-btn {
+    background-color: var(--color-primario2); /* Usa una variable CSS para el color de fondo */
+    transform: translateY(50px);              /* Empuja el botón hacia abajo inicialmente */
+    opacity: 0;                               /* Oculta el botón */
+    transition: 0.3s;                         /* Transición para movimiento y opacidad */
+}
+
+/* Efecto hover sobre el producto que muestra el botón */
+.product:hover .buy-btn {
+    transform: translateY(0);                 /* Vuelve a su posición original */
+    opacity: 1;                               /* Hace visible el botón */
+    color: white;                             /* Color del texto del botón */
 }
